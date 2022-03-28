@@ -2,16 +2,14 @@
 	export const prerender = true;
 
 	// TODO should use a shadow endpoint instead, need to fix a bug first
-	// /** @type {import('@sveltejs/kit').Load} */
 	export async function load({ fetch, params }) {
 		const res = await fetch(`/docs/${params.slug}.json`);
-		// const { prev, next, section } = await res.json();
-		const { section } = await res.json();
+		const { prev, next, section } = await res.json();
 
-		// prev,
-		// next,
 		return {
 			props: {
+				prev,
+				next,
 				section
 			}
 		};
@@ -25,11 +23,11 @@
 	// import '$lib/docs/client/shiki.css';
 	// import * as hovers from '$lib/docs/client/hovers.js';
 
-	// export let prev;
-	// export let next;
+	export let prev;
+	export let next;
 	export let section;
 
-  console.log(section)
+	// console.log(section);
 
 	// hovers.setup();
 </script>
@@ -42,6 +40,26 @@
 	<meta name="Description" content="{section.title} • Portal documentation" />
 </svelte:head>
 
-<section>
-  {@html section.content}
-</section>
+<div class="content listify">
+	<h1>{section.title}</h1>
+
+	<section>
+		{@html section.content}
+	</section>
+
+	<div class="controls">
+		<div>
+			<span class:faded={!prev}>previous</span>
+			{#if prev}
+				<a href="/docs/{prev.slug}">{prev.title}</a>
+			{/if}
+		</div>
+
+		<div>
+			<span class:faded={!next}>next</span>
+			{#if next}
+				<a href="/docs/{next.slug}">{next.title}</a>
+			{/if}
+		</div>
+	</div>
+</div>

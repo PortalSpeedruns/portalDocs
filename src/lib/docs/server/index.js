@@ -63,115 +63,11 @@ export async function read_file(dir, file) {
 	const { metadata, body } = extract_frontmatter(markdown);
 
 	const { content } = parse({
-		body,
+		body: body,
 		file,
 		// gross hack to accommodate FAQ
 		slug: dir === 'faq' ? slug : undefined,
-		code: (source, language, current) => {
-			/** @type {Record<string, string>} */
-			const options = {};
-
-			let html = '';
-
-			source = source
-				.replace(/\/\/\/ (.+?): (.+)\n/gm, (match, key, value) => {
-					options[key] = value;
-					return '';
-				})
-				.replace(/^([\-\+])?((?:    )+)/gm, (match, prefix = '', spaces) => {
-					if (prefix && language !== 'diff') return match;
-
-					// for no good reason at all, marked replaces tabs with spaces
-					let tabs = '';
-					for (let i = 0; i < spaces.length; i += 4) {
-						tabs += '  ';
-					}
-					return prefix + tabs;
-				})
-				.replace(/\*\\\//g, '*/');
-
-			if (language === 'js') {
-				const twoslash = runTwoSlash(source, language, {
-					defaultCompilerOptions: {
-						allowJs: true,
-						checkJs: true,
-						target: 'es2021'
-					}
-				});
-
-				html = renderCodeToHTML(twoslash.code, 'ts', { twoslash: true }, {}, highlighter, twoslash);
-
-				// we need to be able to inject the LSP attributes as HTML, not text, so we
-				// turn &lt; into &amp;lt;
-				html = html.replace(/<data-lsp lsp='(.+?)' *>(\w+)<\/data-lsp>/g, (match, lsp, name) => {
-					return `<data-lsp lsp='${lsp.replace(/&/g, '&amp;')}'>${name}</data-lsp>`;
-				});
-
-				// preserve blank lines in output (maybe there's a more correct way to do this?)
-				html = `<div class="code-block">${
-					options.file ? `<h5>${options.file}</h5>` : ''
-				}${html.replace(/<div class='line'><\/div>/g, '<div class="line"> </div>')}</div>`;
-			} else if (language === 'diff') {
-				const lines = source.split('\n').map((content) => {
-					let type = null;
-					if (/^[\+\-]/.test(content)) {
-						type = content[0] === '+' ? 'inserted' : 'deleted';
-						content = content.slice(1);
-					}
-
-					return {
-						type,
-						content
-					};
-				});
-
-				html = `<div class="code-block"><pre class="language-diff"><code>${lines
-					.map((line) => {
-						if (line.type) return `<span class="${line.type}">${line.content}\n</span>`;
-						return line.content + '\n';
-					})
-					.join('')}</code></pre></div>`;
-			} else {
-				const plang = languages[language];
-				const highlighted = plang
-					? PrismJS.highlight(source, PrismJS.languages[plang], language)
-					: source.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
-
-				html = `<div class="code-block">${
-					options.file ? `<h5>${options.file}</h5>` : ''
-				}<pre class='language-${plang}'><code>${highlighted}</code></pre></div>`;
-			}
-
-			type_regex.lastIndex = 0;
-
-			return html
-				.replace(type_regex, (match, prefix, name) => {
-					if (options.link === 'false' || name === current) {
-						// we don't want e.g. RequestHandler to link to RequestHandler
-						return match;
-					}
-
-					const link = `<a href="${type_links.get(name)}">${name}</a>`;
-					return `${prefix || ''}${link}`;
-				})
-				.replace(
-					/^(\s+)<span class="token comment">([\s\S]+?)<\/span>\n/gm,
-					(match, intro_whitespace, content) => {
-						// we use some CSS trickery to make comments break onto multiple lines while preserving indentation
-						const lines = (intro_whitespace + content).split('\n');
-						return lines
-							.map((line) => {
-								const match = /^(\s*)(.*)/.exec(line);
-								const indent = (match[1] ?? '').replace(/\t/g, '  ').length;
-
-								return `<span class="token comment wrapped" style="--indent: ${indent}ch">${
-									line ?? ''
-								}</span>`;
-							})
-							.join('');
-					}
-				);
-		}
+		code: () => ''
 	});
 
 	return {
@@ -187,24 +83,20 @@ export async function read_file(dir, file) {
  * @param {string} slug
  */
 export async function read(dir, slug) {
-	// console.log('read', dir, slug);
 	const files = fs.readdirSync(`${base}/${dir}`).filter((file) => /^\d{2}-(.+)\.md$/.test(file));
 	const index = files.findIndex((file) => file.slice(3, -3) === slug);
-	// console.log(files, index);
 
 	if (index === -1) return null;
 
 	const prev = index > 0 && files[index - 1];
 	const next = index < files.length - 1 && files[index + 1];
 
-	console.log(next, prev);
-
-	const summarise = (file) => ({
-		slug: file.slice(3, -3), // remove 00- prefix and .md suffix
-		title: extract_frontmatter(fs.readFileSync(`${base}/${dir}/${file}`, 'utf8')).metadata.title
-	});
-
-	console.log(summarise(prev), summarise(next));
+	const summarise = (file) => {
+		return {
+			slug: file.slice(3, -3), // remove 00- prefix and .md suffix
+			title: extract_frontmatter(fs.readFileSync(`${base}/${dir}/${file}`, 'utf8')).metadata.title
+		};
+	};
 
 	return {
 		prev: prev && summarise(prev),

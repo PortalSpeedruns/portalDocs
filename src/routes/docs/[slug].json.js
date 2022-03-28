@@ -1,13 +1,12 @@
 import { read } from '$lib/docs/server';
 
 export async function get({ params }) {
-	// const { prev, next, section } = await read('docs', params.slug);
-	const { section } = await read('docs', params.slug);
+	const { prev, next, section } = await read('docs', params.slug);
 
-	// prev,
-	// next,
 	return {
 		body: {
+			prev,
+			next,
 			section: {
 				file: section.file,
 				title: section.title,

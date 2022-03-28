@@ -1,3 +1,7 @@
-## part 2
+---
+title: Part 2
+---
+
+### part 2
 
 lorem ipsum
