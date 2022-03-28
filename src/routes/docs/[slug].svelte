@@ -1,7 +1,7 @@
 <script context="module">
 	export const prerender = true;
 
-	// TODO should use a shadow endpoint instead, need to fix a bug first
+	// TODO should use a shadow endpoint instead
 	export async function load({ fetch, params }) {
 		const res = await fetch(`/docs/${params.slug}.json`);
 		const { prev, next, section } = await res.json();
@@ -17,17 +17,11 @@
 </script>
 
 <script>
-	// import { Icon } from '@sveltejs/site-kit';
-	// import '@sveltejs/site-kit/code.css';
-	// import '$lib/docs/client/docs.css';
-	// import '$lib/docs/client/shiki.css';
-	// import * as hovers from '$lib/docs/client/hovers.js';
+	import '$lib/docs/client/docs.scss';
 
 	export let prev;
 	export let next;
 	export let section;
-
-	// console.log(section);
 
 	// hovers.setup();
 </script>
@@ -63,3 +57,5 @@
 		</div>
 	</div>
 </div>
+
+<style lang="scss"></style>

@@ -7,7 +7,7 @@ import 'prismjs/components/prism-typescript.js';
 // import 'prism-svelte';
 import { extract_frontmatter, transform } from './markdown';
 // import { modules } from '../../../../../../documentation/types.js';
-import { render_modules } from './modules';
+// import { render_modules } from './modules';
 
 const languages = {
 	bash: 'bash',
