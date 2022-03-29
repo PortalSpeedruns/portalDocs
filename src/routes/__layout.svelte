@@ -1,23 +1,19 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
-	import '../app.css';
+	import '../app.scss';
 </script>
 
 <Header />
 
-<main>
+<main id="main">
 	<slot />
 </main>
 
 <style>
 	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
+		position: relative;
 		margin: 0 auto;
-		box-sizing: border-box;
+		padding-top: var(--top-offset);
+		overflow-x: hidden;
 	}
 </style>
