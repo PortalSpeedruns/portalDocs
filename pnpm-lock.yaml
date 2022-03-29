@@ -2,7 +2,8 @@ lockfileVersion: 5.3
 
 specifiers:
   '@fontsource/fira-mono': ^4.5.0
-  '@lukeed/uuid': ^2.0.0
+  '@fontsource/montserrat': ^4.5.7
+  '@fontsource/open-sans': ^4.5.8
   '@sveltejs/adapter-auto': next
   '@sveltejs/kit': next
   devalue: ^2.0.1
@@ -21,7 +22,8 @@ specifiers:
 
 dependencies:
   '@fontsource/fira-mono': 4.5.4
-  '@lukeed/uuid': 2.0.0
+  '@fontsource/montserrat': 4.5.7
+  '@fontsource/open-sans': 4.5.8
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.33
@@ -83,6 +85,14 @@ packages:
     resolution: {integrity: sha512-uqtzmJEsGz1TMbOifu4YOn+iSXRnUhuWuRYj/BaTFFfoJGSdkGfdVNFRyJucbGgg4uFneOUKghpRMLlw0rsDIQ==}
     dev: false
 
+  /@fontsource/montserrat/4.5.7:
+    resolution: {integrity: sha512-eROpR2P7faJpXtjPx7XGESSNJXT6zUKUnLuUalR8YRpAi7Z4Hg+++LSTRX2GItQDaQliScGapTW10cYunhQDiw==}
+    dev: false
+
+  /@fontsource/open-sans/4.5.8:
+    resolution: {integrity: sha512-3b94XDdRLqL7OlE7OjWg/4pgG825Juw8PLVEDm6h5pio0gMU89ICxfatGxHsBxMGfqad+wnvdmUweZWlELDFpQ==}
+    dev: false
+
   /@humanwhocodes/config-array/0.5.0:
     resolution: {integrity: sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg==}
     engines: {node: '>=10.10.0'}
@@ -101,18 +111,6 @@ packages:
   /@iarna/toml/2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: true
-
-  /@lukeed/csprng/1.0.1:
-    resolution: {integrity: sha512-uSvJdwQU5nK+Vdf6zxcWAY2A8r7uqe+gePwLWzJ+fsQehq18pc0I2hJKwypZ2aLM90+Er9u1xn4iLJPZ+xlL4g==}
-    engines: {node: '>=8'}
-    dev: false
-
-  /@lukeed/uuid/2.0.0:
-    resolution: {integrity: sha512-dUz8OmYvlY5A9wXaroHIMSPASpSYRLCqbPvxGSyHguhtTQIy24lC+EGxQlwv71AhRCO55WOtgwhzQLpw27JaJQ==}
-    engines: {node: '>=8'}
-    dependencies:
-      '@lukeed/csprng': 1.0.1
-    dev: false
 
   /@rollup/pluginutils/4.2.0:
     resolution: {integrity: sha512-2WUyJNRkyH5p487pGnn4tWAsxhEFKN/pT8CMgHshd5H+IXkOnKvKZwsz5ZWz+YCXkleZRAU5kwbfgF8CPfDRqA==}

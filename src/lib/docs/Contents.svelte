@@ -63,7 +63,7 @@
 					class:active={section.path === path}
 					href={section.path}
 				>
-					{section.title}
+					{@html section.title}
 				</a>
 
 				<ul>
@@ -75,7 +75,7 @@
 								class:active={subsection.path === path}
 								href={subsection.path}
 							>
-								{subsection.title}
+								{@html subsection.title}
 							</a>
 
 							{#if section.path === $page.url.pathname}
@@ -88,7 +88,7 @@
 												href={subsection.path}
 												sveltekit:prefetch
 											>
-												{subsection.title}
+												{@html subsection.title}
 											</a>
 										</li>
 									{/each}

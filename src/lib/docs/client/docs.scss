@@ -33,6 +33,10 @@
 		line-height: 1;
 	}
 
+	h3 + h4 {
+		margin-top: 2.5rem !important;
+	}
+
 	h4 {
 		font-weight: 400;
 		font-size: 2rem;
@@ -42,6 +46,10 @@
 		line-height: 1;
 		padding-top: 0;
 		top: 0;
+	}
+
+	h4 > em {
+		opacity: 0.7;
 	}
 
 	h5 {
@@ -91,6 +99,15 @@
 			max-width: var(--linemax);
 			margin: 1em 0;
 		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		a code {
+			color: inherit;
+			background: rgba(255, 62, 0, 0.1) !important;
+		}
 	}
 
 	pre {
@@ -100,6 +117,37 @@
 		max-width: var(--linemax);
 		padding: 1rem;
 		box-shadow: inset 1px 1px 6px hsla(205.7, 63.6%, 30.8%, 0.06);
+	}
+
+	small {
+		font-size: var(--h5);
+		float: right;
+		pointer-events: all;
+		color: var(--prime);
+		cursor: pointer;
+	}
+
+	blockquote {
+		color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(255, 62, 0, 0.1);
+		border-left: 4px solid #ff3e00;
+		padding: 1rem;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		code {
+			background: #d5e2ea;
+		}
+
+		pre code {
+			background: transparent;
+		}
 	}
 }
 
@@ -138,10 +186,6 @@
 	}
 }
 
-.content h3 + h4 {
-	margin-top: 2.5rem !important;
-}
-
 .content h3 > code,
 .content h4 code {
 	background: transparent;
@@ -158,50 +202,6 @@
 .content h3,
 .content h4 {
 	scroll-margin-top: calc(var(--nav-h) + 4rem);
-}
-
-.content h4 > em {
-	opacity: 0.7;
-}
-
-.content small {
-	font-size: var(--h5);
-	float: right;
-	pointer-events: all;
-	color: var(--prime);
-	cursor: pointer;
-}
-
-.content blockquote {
-	color: rgba(0, 0, 0, 0.7);
-	background-color: rgba(255, 62, 0, 0.1);
-	border-left: 4px solid #ff3e00;
-	padding: 1rem;
-}
-
-.content blockquote :first-child {
-	margin-top: 0;
-}
-
-.content blockquote :last-child {
-	margin-bottom: 0;
-}
-
-.content blockquote code {
-	background: #d5e2ea;
-}
-
-.content blockquote pre code {
-	background: transparent;
-}
-
-.content section a:hover {
-	text-decoration: underline;
-}
-
-.content section a code {
-	color: inherit;
-	background: rgba(255, 62, 0, 0.1) !important;
 }
 
 /** hacky overrides to allow filenames inside code blocks */
@@ -247,34 +247,36 @@ pre.language-diff code {
 	color: rgba(0, 0, 0, 0.4);
 }
 
-.language-diff .inserted,
-.language-diff .deleted {
-	position: relative;
-}
+.language-diff {
+	.inserted {
+		color: hsl(120, 100%, 25%);
 
-.language-diff .inserted {
-	color: hsl(120, 100%, 25%);
-}
+		&::before {
+			content: '+';
+		}
+	}
 
-.language-diff .deleted {
-	color: hsl(2, 80%, 47%);
-	user-select: none;
-}
+	.deleted {
+		color: hsl(2, 80%, 47%);
+		user-select: none;
 
-.language-diff .inserted::before,
-.language-diff .deleted::before {
-	position: absolute;
-	left: -0.6rem;
-	top: -0.2rem;
-	font-size: 1.2rem;
-}
+		&::before {
+			content: '-';
+		}
+	}
 
-.language-diff .inserted::before {
-	content: '+';
-}
+	.inserted,
+	.deleted {
+		position: relative;
+	}
 
-.language-diff .deleted::before {
-	content: '-';
+	.inserted::before,
+	.deleted::before {
+		position: absolute;
+		left: -0.6rem;
+		top: -0.2rem;
+		font-size: 1.2rem;
+	}
 }
 
 /** make long comments wrap on mobile */

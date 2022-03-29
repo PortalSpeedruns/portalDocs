@@ -30,6 +30,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
-		"@lukeed/uuid": "^2.0.0"
+		"@fontsource/montserrat": "^4.5.7",
+		"@fontsource/open-sans": "^4.5.8"
 	}
 }
