@@ -65,8 +65,7 @@ export async function read_file(dir, file) {
 	const { content } = parse({
 		body: body,
 		file,
-		// gross hack to accommodate FAQ
-		slug: dir === 'faq' ? slug : undefined,
+		slug,
 		code: () => ''
 	});
 

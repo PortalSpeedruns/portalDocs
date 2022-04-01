@@ -1,5 +1,4 @@
 <script>
-	import { page } from '$app/stores';
 </script>
 
 <header>
@@ -10,7 +9,7 @@
 		<!-- search component -->
 		<ul class="external">
 			<li>
-				<a sveltekit:prefetch href="/docs">Docs</a>
+				<a sveltekit:prefetch href="/docs">docs</a>
 			</li>
 			<li><a href="https://www.speedrun.com/portal">speedrun.com</a></li>
 			<li>

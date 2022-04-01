@@ -7,11 +7,7 @@ export const get = async ({ params }) => {
 		body: {
 			prev,
 			next,
-			section: {
-				file: section.file,
-				title: section.title,
-				content: section.content
-			}
+			section
 		}
 	};
 };
