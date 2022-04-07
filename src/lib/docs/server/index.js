@@ -197,6 +197,11 @@ function parse({ body, file, slug, code }) {
 					title,
 					slug
 				});
+			} else if (level === 5) {
+				section.sections.push({
+					title,
+					slug
+				});
 			} else {
 				throw new Error(`Unexpected <h${level}> in ${file}`);
 			}
