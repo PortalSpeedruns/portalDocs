@@ -4,7 +4,7 @@ title: Setup
 
 [Video explaining the full setup process](https://youtu.be/nc7B6FNi-r8)
 
-### Resources
+## Resources
 
 Most resources are also available from the leaderboard’s resources section.
 
@@ -35,7 +35,7 @@ Has a number of useful features, including a saveglitch overlay (to see where yo
 Listdemo+ (optional)
 Times single demos with ticks for ILs.
 
-### Instalation
+## Instalation
 
 After downloading Source Unpack, extract it somewhere like Documents or Desktop. Do NOT put it in your steam library or in system folders! This version does not require the Steam version, but you do need to own Portal on Steam and have Steam running in order to play.
 
@@ -54,14 +54,14 @@ In Livesplit, make sure to right click and select the Edit Splits option, then c
 
 Linux Installation Guide Video | Text
 
-#### In-game Settings
+### In-game Settings
 
 Video
 Some routes use texture lineups, so set Texture Detail to at least High and ensure that you’re running on DX9 (in the developer console, ensure mat_dxlevel is set to 90). Note that texture quality barely affects framerate, even if your system is lacking. Make sure vertical sync is disabled. The rest of the graphical settings are not important. If you’re struggling to get a decent frame rate, you can try: turning down antialiasing and filter; lowering your resolution; setting the game’s priority to High in Task Manager. If you’re still having issues with performance, you can try using DirectX 8 by using the command mat_dxlevel 80.
 
 It is also strongly recommended that you set your field of view to 90, rather than the default 75. Most people will much prefer this as it feels less claustrophobic.
 
-#### Keybinds
+### Keybinds
 
 From here on, we will use the console to change key bindings and other settings.
 The basic command to bind things is bind [key] [command] without the brackets. You can use any key for any command, but this guide will show examples with commonly used keys. You can find a list of key names here.
@@ -105,7 +105,7 @@ host_timescale 0.5 - change the game speed. 1 is default, 0.5 is 50% speed, etc
 god - infinite health (toggle)
 ai_disable - disable turrets, glados (toggle)
 
-### Rules & Timing
+## Rules & Timing
 
 Rules for Out of Bounds:
 Beat the game as fast as possible.
@@ -158,12 +158,12 @@ Allowed commands/bindings:
 -demo plugin related binds
 -toggle binds
 
-### Basic Movement
+## Basic Movement
 
 [Video showing off the basic movement options]
 [alternate video]
 
-#### ABH
+### ABH
 
 Accelerated Backwards Hopping or ABH is the main movement mechanic used in all Portal categories with the exception of Glitchless. Glitchless uses normal bunnyhopping and you can see a video guide on how to do those here.
 To ABH, it is highly recommended to have +jump bound to your mouse wheel.
@@ -175,7 +175,7 @@ This will build up your speed with every hop you perform. This is because of how
 
 Adding air strafes using the A and D key and moving your mouse in the opposite direction midair will increase your acceleration. The parking lot in escape_02 is a great place to mess around with this and practice ABH in general, and can be accessed using the noclip cheat.
 
-#### AFH
+### AFH
 
 Accelerated Forwards Hopping or AFH is a variant of ABH, and isn’t used as often.
 AFH requires an even higher starting velocity to work.
@@ -184,7 +184,7 @@ The game now thinks you are going backwards, and using the same logic as before,
 AFHing is used in Chamber 07 and Chamber 10, and also in some more advanced strats, like the starting AFH in Chamber 11.
 While those chambers give you enough initial velocity to AFH right away, if you want to do it without the starting velocity, you need to either use an “S tap” (which is just pressing and holding S the moment you hit the ground) or use the +strafe key. Here is a video by Asherza documenting both techniques. Whichever one you decide to do is entirely your preference. If you decide to use +strafe, it is strongly recommended to bind it to your side mouse buttons if you have them.
 
-#### ASH
+### ASH
 
 Accelerated Sideways Hopping, or ASH, is not needed in Portal at all, and is more commonly used in Half-Life 2. You can see where you’re going, with an ASH, and you don’t need a high velocity to start one off, however it can be hard to control. You can use it in certain places to cover short walking distances quickly, and it can be used to pre-aim for the next portal shot by more advanced players. This is considered more of an optimisation than a required strat.
 
@@ -199,9 +199,9 @@ Check out this video guide from Reassagressta here on some other important movem
 Quirks:
 -You can interact with objects using +use (bound to e by default), throw them by using +attack (bound to mouse1 by default) or super throw by holding down mouse1 and then pressing e. You can do this multiple times if you want, but it is currently most common with a singular keypress. Here is a video by inflame showing the differences in throw length between the three main throwing techniques.
 
-### Glitches
+## Glitches
 
-#### Edgeglitch
+### Edgeglitch
 
 Edgeglitch is performed by standing on top or next to the edge of a portal, often it is required that you get stuck for it.
 This will cause your camera to dislocate from your body, allowing you to shoot portals on the opposite portal from where you are.
@@ -218,7 +218,7 @@ Meanwhile the “True Position” looks similar to this.
 
 Your “True Position” and the view you see will do the same movements according to how either sides portal is facing, everything is exactly mirrored.
 
-#### Saveglitch
+### Saveglitch
 
 Saveglitch starts off the same as the Edgeglitch, while standing on top or next to the edge of a portal your camera gets dislocated from your body, the difference is that if you now save and then load that save you will be stuck in this state even if you move away from the portal.
 
@@ -234,7 +234,7 @@ Overall every action you perform is exactly mirrored for the “True Position”
 
 [Saveglitch collision video by jukspa]
 
-#### LAG/AAG/VAG
+### LAG/AAG/VAG
 
 LAG, AAG, and VAG (Large, Acute , and Vertical angle glitches) are all variations of the same exploit, abusing a bug in the way teleports are executed. All of these give the same effect: the player is teleported 3 times in a single tick, once from the entry portal to the exit portal, and twice from the exit portal to the entry portal. The first two teleports cancel each other out, but the third places the player the same distance away from the entry portal as to the exit portal, but in a different direction.
 
@@ -246,7 +246,7 @@ VAG: the activation of this is different from LAG/AAG, it requires the player to
 
 \*Saveglitch from angle glitches - after some angle glitches, the player will get a modified form of saveglitch. This modified saveglitch has different prop interactions than regular saveglitch and can be cancelled simply by shooting the saveglitch portal. Saveloading while in this modified saveglitch state will give the player regular saveglitch.
 
-#### Vertical Wall Warp
+### Vertical Wall Warp
 
 Vertical Wall Warp is an out of bounds exclusive glitch, allowing you to warp either to the top or the bottom of a wall located in out of bounds space.
 The first step is to place a portal on the wall you want to warp up or down on. Next you position yourself in this portal. Make sure that you are actually peeking out of the portal on the target wall. Once you’ve done that crouch down, you will not get warped if you are standing up in the portal.

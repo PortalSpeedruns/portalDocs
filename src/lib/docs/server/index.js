@@ -184,7 +184,7 @@ function parse({ body, file, slug, code }) {
 
 			const slug = headings.filter(Boolean).join('-');
 
-			if (level === 3) {
+			if (level === 2) {
 				section = {
 					title,
 					slug,
@@ -192,16 +192,21 @@ function parse({ body, file, slug, code }) {
 				};
 
 				sections.push(section);
+			} else if (level === 3) {
+				section.sections.push({
+					title,
+					slug
+				});
 			} else if (level === 4) {
-				section.sections.push({
-					title,
-					slug
-				});
+				// section.sections.push({
+				// 	title,
+				// 	slug
+				// });
 			} else if (level === 5) {
-				section.sections.push({
-					title,
-					slug
-				});
+				// section.sections.push({
+				// 	title,
+				// 	slug
+				// });
 			} else {
 				throw new Error(`Unexpected <h${level}> in ${file}`);
 			}

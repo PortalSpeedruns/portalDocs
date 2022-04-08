@@ -14,7 +14,7 @@ Portal Leaderboards: https://www.speedrun.com/Portal
 
 [Video by Inflame on how to submit runs](https://youtu.be/dUfjKNDZkME)
 
-### Abreviations
+## Abreviations
 
 | Abreviation     | Description                                     |
 | --------------- | ----------------------------------------------- |
