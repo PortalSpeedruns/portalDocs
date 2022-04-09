@@ -8,12 +8,10 @@
 	export let prev;
 	export let next;
 	export let section;
-
-	// hovers.setup();
 </script>
 
 <svelte:head>
-	<title>{section.title} • Docs • Portal 1</title>
+	<title>{section.title} • Portal Docs</title>
 
 	<meta name="twitter:title" content="Portal docs" />
 	<meta name="twitter:description" content="{section.title} • Portal documentation" />
