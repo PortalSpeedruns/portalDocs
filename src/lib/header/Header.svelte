@@ -66,6 +66,11 @@
 		}
 	}
 
+	a {
+		color: var(--text);
+		transition: 0.1s ease;
+	}
+
 	.home {
 		width: 20rem;
 		height: var(--nav-h);

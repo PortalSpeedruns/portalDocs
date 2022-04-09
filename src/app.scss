@@ -17,6 +17,9 @@
 	--accent-color: #ff3e00;
 	--heading-color: rgba(0, 0, 0, 0.7);
 	--text-color: #444444;
+	--orange: #FF6A00;
+	--blue: #17C0E9;
+
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 
@@ -92,7 +95,7 @@ p {
 }
 
 a, .link {
-	color: var(--text);
+	color: var(--orange);
 	text-decoration: none;
 
 	&:hover {

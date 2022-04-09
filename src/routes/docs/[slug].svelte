@@ -42,4 +42,34 @@
 	</div>
 </div>
 
-<style lang="scss"></style>
+<style lang="scss">
+	.controls {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		border-top: 1px solid #ddd;
+		margin-top: 4.5rem;
+		padding-top: 1.25rem;
+
+		div {
+			&:first-child {
+				text-align: start;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+
+			span {
+				text-transform: uppercase;
+				font-size: 0.75rem;
+				display: block;
+			}
+		}
+
+		.faded {
+			color: var(--second);
+		}
+	}
+</style>
