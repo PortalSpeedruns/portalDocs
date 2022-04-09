@@ -4,7 +4,7 @@ title: Introduction
 
 Select which category you would like to learn:
 
-[Inbounds](/docs/inbounds) - [Inbounds No SLA](inboundsNoSLA) - [Glitchless](/docs/glitchless) - [Out Of Bounds](outOfBounds)
+<!-- [Inbounds](/docs/inbounds) - [Inbounds No SLA](inboundsNoSLA) - [Glitchless](/docs/glitchless) - [Out Of Bounds](outOfBounds) TODO convert to list of chambers? -->
 
 This guide will provide you with all the knowledge required to start speedrunning Portal in a category of your choice. The guide is mostly designed to be used with [Source Unpack](https://sourceunpack.gameabusefastcomplete.com/) but can partially be used with the plain Steam version of the game. It <u>very recommended</u> to read through the **Setup & Installation** as this will answer many of the questions you might have later on. This guide is a constant work in progress.
 
