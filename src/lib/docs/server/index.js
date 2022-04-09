@@ -182,7 +182,8 @@ function parse({ body, file, slug, code }) {
 			headings[level - 1] = normalized;
 			headings.length = level;
 
-			const slug = headings.filter(Boolean).join('-');
+			const slugNormalized = headings.slice(1);
+			const slug = slugNormalized.filter(Boolean).join('-');
 
 			if (level === 2) {
 				section = {
@@ -211,7 +212,11 @@ function parse({ body, file, slug, code }) {
 				throw new Error(`Unexpected <h${level}> in ${file}`);
 			}
 
-			return `<h${level} id="${slug}">${html}<a href="#${slug}" class="anchor"><span class="visually-hidden">permalink</span></a></h${level}>`;
+			if (level < 4) {
+				// only generate ids for headings lower than 4
+				return `<h${level} id="${slug}">${html}<a href="#${slug}" class="anchor"><span class="visually-hidden">permalink</span></a></h${level}>`;
+			}
+			return `<h${level} >${html}</h${level}>`;
 		},
 		code: (source, language) => code(source, language, current)
 	});

@@ -5,7 +5,7 @@
 @import 'style/reset.scss';
 
 :root {
-	// clean this up
+	// TODO clean this up
 	font-family: 'Open Sans', sans-serif;
 
 	--font-mono: 'Fira Mono', monospace;
@@ -28,6 +28,8 @@
 
 	--top-offset: 6rem;
 
+	--linemax: 42rem;
+
 	--back: #ffffff;
 	--back-light: #f6fafd;
 	--back-api: #e5eef5;
@@ -43,6 +45,7 @@
 	--border-r: 0.4rem;
 }
 
+// TODO move this to font file
 h1,
 .h1,
 h2,
@@ -88,7 +91,7 @@ p {
 	font-weight: normal;
 }
 
-a {
+a, .link {
 	color: var(--text);
 	text-decoration: none;
 

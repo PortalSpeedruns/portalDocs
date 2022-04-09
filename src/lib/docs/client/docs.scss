@@ -6,18 +6,19 @@
 	-moz-tab-size: 2;
 
 	h1 {
-		font-size: 3.2rem;
+		font-size: 3rem;
 		margin: 0;
 	}
 
 	h2 {
 		margin-top: 8rem;
-		padding: 2rem 1.6rem 4rem 0.2rem;
-		border-top: 2px solid #ddd;
+		padding: 3.2ch 1.6rem 1.2ch 0.2rem;
+		border-bottom: 1px solid #ddd;
 		line-height: 1;
-		font-size: var(--h3);
+		font-size: 2rem;
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
+		max-width: var(--linemax);
 
 		.anchor {
 			bottom: 4rem;
@@ -25,12 +26,12 @@
 	}
 
 	h3 {
-		margin: 7rem 0 1rem -1rem;
+		margin: 3rem 0 1rem 0;
 		padding-bottom: 1rem;
 		color: var(--heading);
 		max-width: var(--linemax);
-		border-bottom: 1px solid #ddd;
 		line-height: 1;
+		font-size: 1.5rem;
 	}
 
 	h3 + h4 {
@@ -39,9 +40,9 @@
 
 	h4 {
 		font-weight: 400;
-		font-size: 2rem;
+		font-size: 1.25rem;
 		color: var(--heading);
-		margin: 5rem 0 1.6rem -1rem;
+		margin: 3rem 0 1.6rem 0;
 		padding-left: 0;
 		line-height: 1;
 		padding-top: 0;
@@ -53,14 +54,14 @@
 	}
 
 	h5 {
-		font-size: 2.4rem;
+		font-size: 1rem;
 		margin: 2em 0 0.5em 0;
 	}
 
 	.anchor {
 		position: absolute;
 		display: block;
-		// background: url(@sveltejs/site-kit/icons/link.svg) 0 50% no-repeat;
+		background: url(@sveltejs/site-kit/icons/link.svg) 0 50% no-repeat;
 		background-size: 1em 1em;
 		width: 1.4em;
 		height: 1em;
@@ -91,9 +92,16 @@
 		background: transparent;
 	}
 
-	section {
-		padding: 0 0 0 1rem;
+	iframe[title="YouTube video player"] {
+		display: block;
+		height: auto;
+		width: 100%;
+		max-width: var(--linemax);
+		aspect-ratio: 16 / 9;
+		margin-bottom: 1rem;
+	}
 
+	section {
 		p {
 			font-size: 1rem;
 			max-width: var(--linemax);
@@ -165,16 +173,16 @@
 	bottom: 1rem;
 }
 
-@media (min-width: 400px) {
-	.content h1 {
-		font-size: 4.2rem;
-	}
-}
+// @media (min-width: 400px) {
+// 	.content h1 {
+// 		font-size: 4.2rem;
+// 	}
+// }
 
 @media (min-width: 768px) {
-	.content h1 {
-		font-size: 5.4rem;
-	}
+	// .content h1 {
+	// 	font-size: 5.4rem;
+	// }
 
 	.content .anchor:focus,
 	.content h2:hover .anchor,
