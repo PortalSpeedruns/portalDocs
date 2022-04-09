@@ -1,6 +1,6 @@
 import { read } from '$lib/docs/server';
 
-export const get = async ({ params }) => {
+export async function get({ params }) {
 	const { prev, next, section } = await read('docs', params.slug);
 
 	return {
@@ -14,4 +14,4 @@ export const get = async ({ params }) => {
 			}
 		}
 	};
-};
+}
