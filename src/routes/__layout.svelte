@@ -14,6 +14,6 @@
 		position: relative;
 		margin: 0 auto;
 		padding-top: var(--top-offset);
-		overflow-x: hidden;
+		/* overflow-x: hidden; */
 	}
 </style>

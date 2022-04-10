@@ -45,19 +45,27 @@ export async function read_file(dir, file) {
 			code = code.replace(/\n$/, '') + '\n';
 
 			if (!lang) {
-				return '<pre><code>' + (escaped ? code : escape(code, true)) + '</code></pre>\n';
+				return (
+					'<div class="code-block"><pre><code>' +
+					(escaped ? code : escape(code, true)) +
+					'</code></pre></div>\n'
+				);
 			}
 
 			if (languages[lang]) {
-				return `<pre><code>${PrismJS.highlight(code, PrismJS.languages[lang], lang)}</pre></code>`;
+				return `<div class="code-block"><pre><code>${PrismJS.highlight(
+					code,
+					PrismJS.languages[lang],
+					lang
+				)}</pre></code></div>`;
 			}
 
 			return (
-				'<pre><code class="language-' +
+				'<div class="code-block"><pre><code class="language-' +
 				escape(lang, true) +
 				'">' +
 				(escaped ? code : escape(code, true)) +
-				'</code></pre>\n'
+				'</code></pre></div>\n'
 			);
 		}
 	});
