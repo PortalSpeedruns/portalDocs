@@ -4,6 +4,8 @@
 
 <script>
 	import '$lib/docs/client/docs.scss';
+	import '$lib/docs/client/code.scss';
+	import 'prismjs/themes/prism.css';
 
 	export let prev;
 	export let next;

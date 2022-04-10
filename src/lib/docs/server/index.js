@@ -1,19 +1,15 @@
 import fs from 'fs';
-import { renderCodeToHTML, runTwoSlash, createShikiHighlighter } from 'shiki-twoslash';
+// import { renderCodeToHTML, runTwoSlash, createShikiHighlighter } from 'shiki-twoslash';
 import PrismJS from 'prismjs';
 import 'prismjs/components/prism-bash.js';
 import 'prismjs/components/prism-diff.js';
 import 'prismjs/components/prism-typescript.js';
-// import 'prism-svelte';
-import { extract_frontmatter, transform } from './markdown';
-// import { modules } from '../../../../../../documentation/types.js';
-// import { render_modules } from './modules';
+import { extract_frontmatter, transform, escape } from './markdown';
 
 const languages = {
 	bash: 'bash',
 	env: 'bash',
 	html: 'markup',
-	svelte: 'svelte',
 	js: 'javascript',
 	css: 'css',
 	diff: 'diff',
@@ -21,28 +17,7 @@ const languages = {
 	'': ''
 };
 
-// const base = '../../documentation';
 const base = './documentation';
-
-// const type_regex = new RegExp(
-// 	`(import\\(&apos;@sveltejs\\/kit&apos;\\)\\.)?\\b(${modules
-// 		.map((module) => module.types)
-// 		.flat()
-// 		.map((type) => type.name)
-// 		.join('|')})\\b`,
-// 	'g'
-// );
-
-const type_links = new Map();
-
-// modules.forEach((module) => {
-// 	const slug = slugify(module.name);
-
-// 	module.types.forEach((type) => {
-// 		const link = `/docs/types#${slug}-${slugify(type.name)}`;
-// 		type_links.set(type.name, link);
-// 	});
-// });
 
 /**
  * @param {string} dir
@@ -55,10 +30,8 @@ export async function read_file(dir, file) {
 	const slug = match[1];
 
 	const markdown = fs.readFileSync(`${base}/${dir}/${file}`, 'utf-8');
-	// .replace('**TYPES**', () => render_modules('types'))
-	// .replace('**EXPORTS**', () => render_modules('exports'));
 
-	const highlighter = await createShikiHighlighter({ theme: 'css-variables' });
+	// const highlighter = await createShikiHighlighter({ theme: 'css-variables' });
 
 	const { metadata, body } = extract_frontmatter(markdown);
 
@@ -66,7 +39,27 @@ export async function read_file(dir, file) {
 		body: body,
 		file,
 		slug,
-		code: () => ''
+		code: (code, infostring, escaped) => {
+			const lang = (infostring || '').match(/\S*/)[0];
+
+			code = code.replace(/\n$/, '') + '\n';
+
+			if (!lang) {
+				return '<pre><code>' + (escaped ? code : escape(code, true)) + '</code></pre>\n';
+			}
+
+			if (languages[lang]) {
+				return `<pre><code>${PrismJS.highlight(code, PrismJS.languages[lang], lang)}</pre></code>`;
+			}
+
+			return (
+				'<pre><code class="language-' +
+				escape(lang, true) +
+				'">' +
+				(escaped ? code : escape(code, true)) +
+				'</code></pre>\n'
+			);
+		}
 	});
 
 	return {
@@ -127,16 +120,13 @@ export function read_headings(dir) {
 			const slug = match[1];
 
 			const markdown = fs.readFileSync(`${base}/${dir}/${file}`, 'utf-8');
-			// .replace('**TYPES**', () => render_modules('types'))
-			// .replace('**EXPORTS**', () => render_modules('exports'));
 
 			const { body, metadata } = extract_frontmatter(markdown);
 
 			const { sections } = parse({
 				body,
 				file,
-				// gross hack to accommodate FAQ
-				slug: dir === 'faq' ? slug : undefined,
+				slug: slug,
 				code: () => ''
 			});
 
