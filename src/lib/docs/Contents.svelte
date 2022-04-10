@@ -75,7 +75,7 @@
 								class:active={subsection.path === path}
 								href={subsection.path}
 							>
-								{@html subsection.title}
+								<b>{@html subsection.title}</b>
 							</a>
 
 							{#if section.path === $page.url.pathname}
@@ -88,7 +88,7 @@
 												href={subsection.path}
 												sveltekit:prefetch
 											>
-												{@html subsection.title}
+												- {@html subsection.title}
 											</a>
 										</li>
 									{/each}
@@ -112,7 +112,7 @@
 	}
 
 	.sidebar {
-		padding: var(--top-offset) 0 6.4rem 3.2rem;
+		padding: var(--top-offset) 0 0 0;
 		font-family: var(--font);
 		overflow-y: auto;
 		height: 100%;
@@ -139,18 +139,19 @@
 
 	.section {
 		display: block;
-		padding-bottom: 0.8rem;
+		padding-bottom: 1rem;
 		font-size: var(--h6);
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.1rem;
 		font-weight: 600;
+		text-decoration: underline;
 	}
 
 	.subsection {
 		display: block;
 		font-size: 1rem;
 		font-family: var(--font);
-		padding-bottom: 0.6em;
+		padding-bottom: 0.5em;
 	}
 
 	.active::after {
@@ -204,12 +205,6 @@
 			height: 2em;
 			pointer-events: none;
 			height: var(--top-offset);
-			background: linear-gradient(
-				to bottom,
-				rgba(103, 103, 120, 0) 0%,
-				rgba(103, 103, 120, 0.7) 50%,
-				rgba(103, 103, 120, 1) 100%
-			);
 		}
 	}
 </style>
