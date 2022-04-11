@@ -8,7 +8,14 @@
 </script>
 
 <div class="searchContainer">
-	<input type="text" class="searchInput" placeholder="Search" id="search" />
+	<input
+		type="search"
+		on:input={(e) => {}}
+		on:mousedown|preventDefault={() => {}}
+		on:touchstart|preventDefault={() => {}}
+		class="searchInput"
+		id="search"
+	/>
 	<label for="#search">
 		<svg viewBox="0 0 24 24" aria-hidden="true">
 			<path
@@ -28,21 +35,29 @@
 
 		svg {
 			position: absolute;
-			width: 1.5rem;
-			height: 1.5rem;
-			left: 1rem;
-			top: calc(50% - 0.75rem);
+			width: 1.25rem;
+			height: 1.25rem;
+			left: 0.65rem;
+			top: calc(50% - 0.625rem);
 			color: #ccc;
+		}
+
+		input {
+			height: 2rem;
+			padding: 0.5em 1.25em;
+			border-radius: 2rem;
+
+			border: 1px solid #ccc;
 		}
 
 		label {
 			color: #666;
 			position: absolute;
-			top: calc(50% - 0.9rem);
+			top: calc(50% - 0.5rem);
 			width: 100%;
 			text-align: center;
 			pointer-events: none;
-			font-size: 1.2rem;
+			font-size: 0.7rem;
 			text-transform: uppercase;
 		}
 
@@ -50,8 +65,8 @@
 			display: none;
 			background: #eee;
 			border: 1px solid #ddd;
-			padding: 0.2rem 0.2rem 0rem 0.2rem;
-			color: #666;
+			padding: 0rem 0.2em 0.05rem 0.2em;
+			color: inherit;
 			font-size: inherit;
 			font-family: inherit;
 			border-radius: 2px;
@@ -59,6 +74,11 @@
 			@media (min-width: 800px) {
 				display: inline;
 			}
+		}
+
+		label,
+		kbd {
+			text-align: center;
 		}
 	}
 </style>
