@@ -1,18 +1,73 @@
 <script>
+	import flexsearch from 'flexsearch';
 	import { browser } from '$app/env';
+	import { onMount } from 'svelte';
 
 	let nav;
 	if (browser) {
 		nav = navigator;
 	}
+
+	let results = [];
+	$: results, console.log(results);
+
+	let index;
+	let lookup;
+	let query = '';
+
+	onMount(async () => {
+		const res = await fetch('/content.json');
+		const { blocks } = await res.json();
+
+		index = new flexsearch.Index({
+			tokenize: 'forward'
+		});
+
+		lookup = new Map();
+
+		let time = Date.now();
+		for (const block of blocks) {
+			const title = block.breadcrumbs[block.breadcrumbs.length - 1];
+			lookup.set(block.href, {
+				title,
+				href: block.href,
+				breadcrumbs: block.breadcrumbs.slice(0, -1),
+				content: block.content
+			});
+			index.add(block.href, `${title} ${block.content}`);
+
+			// poor man's way of preventing blocking
+			if (Date.now() - time > 25) {
+				await new Promise((f) => setTimeout(f, 0));
+				time = Date.now();
+			}
+		}
+
+		update();
+	});
+
+	function update() {
+		results = (index ? index.search(query) : []).map((href) => lookup.get(href));
+	}
 </script>
+
+<svelte:window
+	on:keydown={(e) => {
+		if (e.key === 'k' && (navigator.platform === 'MacIntel' ? e.metaKey : e.ctrlKey)) {
+			e.preventDefault();
+		}
+	}}
+/>
 
 <div class="searchContainer">
 	<input
 		type="search"
-		on:input={(e) => {}}
-		on:mousedown|preventDefault={() => {}}
-		on:touchstart|preventDefault={() => {}}
+		bind:value={query}
+		on:input={(e) => {
+			update();
+		}}
+		on:mousedown={() => {}}
+		on:touchstart={() => {}}
 		class="searchInput"
 		id="search"
 	/>
@@ -26,9 +81,38 @@
 		<span>Search</span> <kbd>{nav?.platform === 'MacIntel' ? '⌘' : 'Ctrl'}</kbd>
 		<kbd>K</kbd>
 	</label>
+
+	<div class="results">
+		<ul>
+			{#each results as result}
+				<li>
+					<pre>{JSON.stringify(result, null, 2)}</pre>
+					<a href={result.href}>{result.content}</a>
+				</li>
+			{/each}
+		</ul>
+	</div>
 </div>
 
 <style lang="scss">
+	.results {
+		position: absolute;
+		top: 2.5rem;
+		max-width: 100%;
+		max-height: 50vh;
+
+		overflow-y: scroll;
+
+		box-shadow: var(--shadow-md);
+		background-color: #fff;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+		}
+	}
+
 	.searchContainer {
 		display: flex;
 		position: relative;
