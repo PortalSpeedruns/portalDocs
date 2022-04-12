@@ -5,6 +5,7 @@ specifiers:
   '@fontsource/montserrat': ^4.5.7
   '@fontsource/open-sans': ^4.5.8
   '@sveltejs/adapter-auto': next
+  '@sveltejs/adapter-vercel': ^1.0.0-next.47
   '@sveltejs/kit': next
   devalue: ^2.0.1
   eslint: ^7.32.0
@@ -27,7 +28,8 @@ dependencies:
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0-next.34
-  '@sveltejs/kit': 1.0.0-next.310_sass@1.50.0+svelte@3.47.0
+  '@sveltejs/adapter-vercel': 1.0.0-next.47
+  '@sveltejs/kit': 1.0.0-next.311_sass@1.50.0+svelte@3.47.0
   devalue: 2.0.1
   eslint: 7.32.0
   eslint-config-prettier: 8.5.0_eslint@7.32.0
@@ -149,8 +151,8 @@ packages:
       esbuild: 0.14.34
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.310_sass@1.50.0+svelte@3.47.0:
-    resolution: {integrity: sha512-pTyMyaoyHS+V5cQZIQMfQXmLkhw1VaRwT9avOSgwDc0QBpnNw2LdzwoPYsUr96ca5B6cfT3SMUNolxErTNHmPQ==}
+  /@sveltejs/kit/1.0.0-next.311_sass@1.50.0+svelte@3.47.0:
+    resolution: {integrity: sha512-OkRIi0XBXcs16J+H+6fgOeFYxKu05gamY08KHAQ5cohjymUODGWIwaIfwAuNkZAcEEr8Vh2ejp4UcaxNzD53lQ==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:

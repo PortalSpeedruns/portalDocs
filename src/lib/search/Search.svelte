@@ -9,7 +9,7 @@
 	}
 
 	let results = [];
-	$: results, console.log(results);
+	// $: results, console.log(results);
 
 	let index;
 	let lookup;
