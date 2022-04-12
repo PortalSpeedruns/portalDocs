@@ -9,7 +9,6 @@
 	}
 
 	let results = [];
-	// $: results, console.log(results);
 
 	let index;
 	let lookup;
@@ -49,6 +48,29 @@
 	function update() {
 		results = (index ? index.search(query) : []).map((href) => lookup.get(href));
 	}
+
+	function escape(text) {
+		return text.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	}
+
+	function excerpt(content, query) {
+		const index = content.toLowerCase().indexOf(query.toLowerCase());
+		if (index === -1) {
+			return content.slice(0, 100);
+		}
+
+		const prefix = index > 20 ? `…${content.slice(index - 15, index)}` : content.slice(0, index);
+		const suffix = content.slice(
+			index + query.length,
+			index + query.length + (80 - (prefix.length + query.length))
+		);
+
+		return (
+			escape(prefix) +
+			`<mark>${escape(content.slice(index, index + query.length))}</mark>` +
+			escape(suffix)
+		);
+	}
 </script>
 
 <svelte:window
@@ -86,8 +108,11 @@
 		<ul>
 			{#each results as result}
 				<li>
-					<pre>{JSON.stringify(result, null, 2)}</pre>
-					<a href={result.href}>{result.content}</a>
+					<a on:click={() => {}} href={result.href}>
+						<small>{result.breadcrumbs.join('/')}</small>
+						<strong>{@html excerpt(result.title, query)}</strong>
+						<span>{@html excerpt(result.content, query)}</span>
+					</a>
 				</li>
 			{/each}
 		</ul>
@@ -97,11 +122,13 @@
 <style lang="scss">
 	.results {
 		position: absolute;
-		top: 2.5rem;
-		max-width: 100%;
-		max-height: 50vh;
+		top: 3rem;
+		width: calc(100% + 4rem);
+		transform: translateX(-2rem);
+		max-height: 48vh;
 
-		overflow-y: scroll;
+		overflow: auto;
+		overscroll-behavior-y: none;
 
 		box-shadow: var(--shadow-md);
 		background-color: #fff;
@@ -110,6 +137,52 @@
 			display: flex;
 			flex-direction: column;
 			list-style: none;
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+			line-height: 1;
+			padding: 1rem;
+
+			&:hover {
+				background: #eee;
+			}
+
+			&:focus {
+				background: var(--second);
+				color: white;
+				outline: none;
+			}
+
+			small,
+			strong,
+			span {
+				display: block;
+				color: var(--text-color);
+			}
+
+			small {
+				font-size: 0.75rem;
+			}
+
+			strong {
+				font-size: 1rem;
+				margin: 0.4em 0;
+			}
+
+			span {
+				font-size: 0.75rem;
+			}
+
+			:global(mark) {
+				background: var(--second);
+				color: #fff;
+				text-decoration: none;
+				border-radius: 1px;
+
+				font-size: inherit;
+			}
 		}
 	}
 
@@ -132,6 +205,11 @@
 			border-radius: 2rem;
 
 			border: 1px solid #ccc;
+
+			&:focus {
+				outline: none;
+				border-color: var(--prime);
+			}
 		}
 
 		label {
