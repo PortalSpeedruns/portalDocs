@@ -1,9 +1,6 @@
 import fs from 'fs';
-import path from 'path';
 import { extract_frontmatter, transform } from '$lib/docs/server/markdown';
-// import { render_modules } from '$lib/docs/server/modules';
 import { slugify } from '../lib/docs/server';
-// import { modules } from '../../../../documentation/types.js';
 
 const categories = [
 	{
@@ -16,13 +13,6 @@ const categories = [
 
 export function get() {
 	const blocks = [];
-
-	// console.log(path);
-	// fs.readdir('./', (err, files) => {
-	// 	files.forEach((file) => {
-	// 		console.log(file);
-	// 	});
-	// });
 
 	const basePath = './documentation';
 
@@ -37,8 +27,6 @@ export function get() {
 
 			const filepath = `${basePath}/${category.slug}/${file}`;
 			const markdown = fs.readFileSync(filepath, 'utf-8');
-			// .replace('**TYPES**', () => render_modules('types'))
-			// .replace('**EXPORTS**', () => render_modules('exports'));
 
 			const { body, metadata } = extract_frontmatter(markdown);
 
@@ -96,8 +84,8 @@ function plaintext(markdown) {
 		code: block,
 		blockquote: block,
 		html: () => {
+			// ignore html elments in markdown
 			return '';
-			// console.log(x);
 			// throw new Error('TODO implement HTML');
 		},
 		hr: () => '',
