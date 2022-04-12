@@ -5,27 +5,40 @@ export function get() {
 
 	if (fs.existsSync('../documentation')) {
 		// Do something
-		console.log('../docs');
+		files.push('../docs');
 		for (const file of fs.readdirSync(`../documentation`)) {
-			console.log(file);
 			files.push(file);
 		}
 	}
 
 	if (fs.existsSync('./')) {
 		// Do something
-		console.log('./');
+		files.push('./');
 		for (const file of fs.readdirSync(`./`)) {
-			console.log(file);
 			files.push(file);
 		}
 	}
 
 	if (fs.existsSync('../')) {
 		// Do something
-		console.log('../');
+		files.push('../');
 		for (const file of fs.readdirSync(`../`)) {
-			console.log(file);
+			files.push(file);
+		}
+	}
+
+	if (fs.existsSync('../../')) {
+		// Do something
+		files.push('../');
+		for (const file of fs.readdirSync(`../`)) {
+			files.push(file);
+		}
+	}
+
+	if (fs.existsSync('../../documentation')) {
+		// Do something
+		files.push('../../docs');
+		for (const file of fs.readdirSync(`../`)) {
 			files.push(file);
 		}
 	}

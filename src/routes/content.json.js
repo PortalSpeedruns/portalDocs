@@ -14,7 +14,7 @@ const categories = [
 export function get() {
 	const blocks = [];
 
-	const basePath = './documentation';
+	const basePath = '../../documentation';
 
 	for (const category of categories) {
 		const breadcrumbs = category.label ? [category.label] : [];
