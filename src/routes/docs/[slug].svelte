@@ -1,5 +1,20 @@
 <script context="module">
 	export const prerender = true;
+
+	// TODO should use a shadow endpoint instead, but svelte kit bug?
+	/** @type {import('@sveltejs/kit').Load} */
+	export async function load({ fetch, params }) {
+		const res = await fetch(`/docs/${params.slug}.json`);
+		const { prev, next, section } = await res.json();
+
+		return {
+			props: {
+				prev,
+				next,
+				section
+			}
+		};
+	}
 </script>
 
 <script>

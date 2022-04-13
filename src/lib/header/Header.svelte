@@ -1,4 +1,5 @@
 <script>
+	import Search from '$lib/search/Search.svelte';
 </script>
 
 <header>
@@ -6,7 +7,7 @@
 		<div class="home">
 			<a href="/">Portal Docs</a>
 		</div>
-		<!-- search component -->
+		<Search />
 		<ul class="external">
 			<li><a href="https://www.speedrun.com/portal">speedrun.com</a></li>
 			<li>
