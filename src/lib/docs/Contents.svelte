@@ -40,7 +40,7 @@
 		let i = headings.length;
 
 		while (i--) {
-			if (positions[i] + top < 40) {
+			if (positions[i] + top < 120) {
 				const heading = headings[i];
 				path = `${$page.url.pathname}#${heading.id}`;
 				return;
@@ -88,7 +88,7 @@
 												href={subsection.path}
 												sveltekit:prefetch
 											>
-												- {@html subsection.title}
+												{@html subsection.title}
 											</a>
 										</li>
 									{/each}
@@ -107,8 +107,8 @@
 		top: 0;
 		left: 0;
 		overflow: hidden;
-		background-color: var(--second);
-		color: white;
+		background-color: var(--white);
+		color: black;
 	}
 
 	.sidebar {
@@ -125,26 +125,26 @@
 		display: block;
 		line-height: 1.2;
 		margin: 0;
-		margin-bottom: 4rem;
+		margin-bottom: 1.5rem;
 	}
 
 	a {
 		position: relative;
 		transition: color 0.2s;
-		border-bottom: none;
-		padding: 0;
+		padding: 0.375rem 1rem;
 		color: var(--sidebar-text);
+		border-radius: 0.25rem;
 		user-select: none;
+
+		font-size: 1.125rem;
+		font-weight: 700;
 	}
 
 	.section {
 		display: block;
-		padding-bottom: 1rem;
+		margin-bottom: 0.25rem;
 		font-size: var(--h6);
-		text-transform: uppercase;
-		letter-spacing: 0.1rem;
 		font-weight: 600;
-		text-decoration: underline;
 	}
 
 	.subsection {
@@ -152,21 +152,11 @@
 		font-size: 1rem;
 		font-family: var(--font);
 		padding-bottom: 0.5em;
-	}
-
-	.active::after {
-		content: '';
-		position: absolute;
-		right: 0;
-		top: 2px;
-		width: 0;
-		height: 0;
-		border: 6px solid transparent;
-		border-right-color: white;
+		margin-left: 1rem;
 	}
 
 	.nested {
-		padding-left: 1.2rem;
+		margin-left: 2rem;
 	}
 
 	ul ul,
@@ -178,7 +168,12 @@
 	.section:hover,
 	.subsection:hover,
 	.active {
-		color: white;
+		background-color: rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+	}
+
+	.active {
+		color: var(--orange);
 	}
 
 	@media (min-width: 600px) {
@@ -192,8 +187,9 @@
 	@media (min-width: 832px) {
 		.sidebar {
 			columns: 1;
-			padding-left: 3.2rem;
-			padding-right: 0;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-bottom: 1rem;
 		}
 
 		nav::after {
