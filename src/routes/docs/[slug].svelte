@@ -86,7 +86,7 @@
 		}
 
 		.faded {
-			color: var(--second);
+			color: rgb(143, 143, 143);
 		}
 	}
 </style>
