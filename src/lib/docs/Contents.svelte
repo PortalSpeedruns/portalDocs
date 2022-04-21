@@ -40,7 +40,7 @@
 		let i = headings.length;
 
 		while (i--) {
-			if (positions[i] + top < 40) {
+			if (positions[i] + top < 120) {
 				const heading = headings[i];
 				path = `${$page.url.pathname}#${heading.id}`;
 				return;
@@ -75,7 +75,7 @@
 								class:active={subsection.path === path}
 								href={subsection.path}
 							>
-								{@html subsection.title}
+								<b>{@html subsection.title}</b>
 							</a>
 
 							{#if section.path === $page.url.pathname}
@@ -107,12 +107,12 @@
 		top: 0;
 		left: 0;
 		overflow: hidden;
-		background-color: var(--second);
-		color: white;
+		background-color: var(--white);
+		color: black;
 	}
 
 	.sidebar {
-		padding: var(--top-offset) 0 6.4rem 3.2rem;
+		padding: var(--top-offset) 0 0 0;
 		font-family: var(--font);
 		overflow-y: auto;
 		height: 100%;
@@ -125,24 +125,25 @@
 		display: block;
 		line-height: 1.2;
 		margin: 0;
-		margin-bottom: 4rem;
+		margin-bottom: 1.5rem;
 	}
 
 	a {
 		position: relative;
 		transition: color 0.2s;
-		border-bottom: none;
-		padding: 0;
+		padding: 0.375rem 1rem;
 		color: var(--sidebar-text);
+		border-radius: 0.25rem;
 		user-select: none;
+
+		font-size: 1.125rem;
+		font-weight: 700;
 	}
 
 	.section {
 		display: block;
-		padding-bottom: 0.8rem;
+		margin-bottom: 0.25rem;
 		font-size: var(--h6);
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
 		font-weight: 600;
 	}
 
@@ -150,22 +151,12 @@
 		display: block;
 		font-size: 1rem;
 		font-family: var(--font);
-		padding-bottom: 0.6em;
-	}
-
-	.active::after {
-		content: '';
-		position: absolute;
-		right: 0;
-		top: 2px;
-		width: 0;
-		height: 0;
-		border: 6px solid transparent;
-		border-right-color: white;
+		padding-bottom: 0.5em;
+		margin-left: 1rem;
 	}
 
 	.nested {
-		padding-left: 1.2rem;
+		margin-left: 2rem;
 	}
 
 	ul ul,
@@ -177,7 +168,12 @@
 	.section:hover,
 	.subsection:hover,
 	.active {
-		color: white;
+		background-color: rgba(0, 0, 0, 0.1);
+		text-decoration: none;
+	}
+
+	.active {
+		color: var(--orange);
 	}
 
 	@media (min-width: 600px) {
@@ -191,8 +187,9 @@
 	@media (min-width: 832px) {
 		.sidebar {
 			columns: 1;
-			padding-left: 3.2rem;
-			padding-right: 0;
+			padding-left: 1rem;
+			padding-right: 1rem;
+			padding-bottom: 1rem;
 		}
 
 		nav::after {
@@ -204,12 +201,6 @@
 			height: 2em;
 			pointer-events: none;
 			height: var(--top-offset);
-			background: linear-gradient(
-				to bottom,
-				rgba(103, 103, 120, 0) 0%,
-				rgba(103, 103, 120, 0.7) 50%,
-				rgba(103, 103, 120, 1) 100%
-			);
 		}
 	}
 </style>

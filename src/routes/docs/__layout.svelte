@@ -38,7 +38,26 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
+	.toc-container {
+		/* width */
+		&::-webkit-scrollbar {
+			width: 0.5rem;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			background-color: #ccd0d5;
+			border-radius: 10px;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: #7c7c7c;
+			border-radius: 10px;
+		}
+	}
+
 	@media (min-width: 832px) {
 		.grid {
 			grid-template-rows: unset;

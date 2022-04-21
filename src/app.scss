@@ -10,6 +10,7 @@
 
 	--font-mono: 'Fira Mono', monospace;
 	--pure-white: #ffffff;
+	--black: #000;
 	--primary-color: #b9c6d2;
 	--secondary-color: #d0dde9;
 
@@ -24,7 +25,7 @@
 	--column-margin-top: 4rem;
 
 	--sidebar-w: 20rem;
-	--nav-side: 2.4rem;
+	--nav-side: 2rem;
 	--nav-h: 3rem;
 
 	--side-nav: 2rem;
@@ -37,13 +38,13 @@
 	--back-light: #f6fafd;
 	--back-api: #e5eef5;
 	--prime: #ff3e00;
-	--second: #676778;
+	--second: var(--blue); // Sidebar main color
 	--flash: #40b3ff;
 	--highlight: #ffff82;
 	--heading: #222;
 	--text: #444;
 	--second-text: #7b7766;
-	--sidebar-text: rgba(255, 255, 255, 0.75);
+	--sidebar-text: var(--black);
 	--border-w: 0.3rem;
 	--border-r: 0.4rem;
 

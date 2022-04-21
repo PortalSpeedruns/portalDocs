@@ -1,11 +1,14 @@
 <script>
 	import Search from '$lib/search/Search.svelte';
+	import paintLogo from '$lib/header/portalDocsPaint.png';
 </script>
 
 <header>
 	<nav>
 		<div class="home">
-			<a href="/">Portal Docs</a>
+			<a href="/">
+				<img src={paintLogo} alt="Portal Docs" />
+			</a>
 		</div>
 		<Search />
 		<ul class="external">
@@ -65,11 +68,19 @@
 			width: 1.25rem;
 			height: 1.25rem;
 		}
+
+		img {
+			height: 1.75rem;
+		}
 	}
 
 	a {
 		color: var(--text);
 		transition: 0.1s ease;
+
+		&:hover {
+			color: var(--accent-color);
+		}
 	}
 
 	.home {
@@ -110,9 +121,5 @@
 	li {
 		position: relative;
 		height: 100%;
-	}
-
-	a:hover {
-		color: var(--accent-color);
 	}
 </style>
