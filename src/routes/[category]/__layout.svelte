@@ -1,12 +1,13 @@
 <script context="module">
 	export const prerender = true;
 
-	export async function load({ fetch }) {
-		const res = await fetch('/docs.json');
+	export async function load({ params, fetch }) {
+		const res = await fetch(`/${params.category}.json`);
 
 		return {
 			props: {
-				sections: await res.json()
+				sections: await res.json(),
+				params
 			}
 		};
 	}
@@ -16,15 +17,16 @@
 	import Contents from '$lib/docs/Contents.svelte';
 
 	export let sections;
+	export let params;
 
 	$: contents = sections.map((section) => ({
-		path: `/docs/${section.slug}`,
+		path: `/${params.category}/${section.slug}`,
 		title: section.title,
 		sections: section.sections.map((subsection) => ({
-			path: `/docs/${section.slug}#${subsection.slug}`,
+			path: `/${params.category}/${section.slug}#${subsection.slug}`,
 			title: subsection.title,
 			sections: subsection.sections.map((subsection) => ({
-				path: `/docs/${section.slug}#${subsection.slug}`,
+				path: `/${params.category}/${section.slug}#${subsection.slug}`,
 				title: subsection.title
 			}))
 		}))
