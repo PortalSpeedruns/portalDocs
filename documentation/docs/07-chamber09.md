@@ -39,7 +39,7 @@ Preserving [SG](./movement-and-glitches#glitches-save-glitch) from 09 into 10 so
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ttGE8s9T3xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Saves one second over the intermediate strat by implementing early activation. Requires good movement and has some tight timings.
-There is also an alternate way to do the ending, shown [here](https://www.youtube-nocookie.com/embed/jvYXdnRwues)
+There is also an alternate way to do the ending, shown [here](https://www.youtu.be/jvYXdnRwues)
 
 ## Glitchless
 ### Beginner - Portal Peek
