@@ -11,7 +11,8 @@
 			props: {
 				prev,
 				next,
-				section
+				section,
+				params
 			}
 		};
 	}
@@ -25,6 +26,7 @@
 	export let prev;
 	export let next;
 	export let section;
+	export let params;
 </script>
 
 <svelte:head>
@@ -46,14 +48,14 @@
 		<div>
 			<span class:faded={!prev}>previous</span>
 			{#if prev}
-				<a href="/docs/{prev.slug}">{prev.title}</a>
+				<a href="/docs/{params.category}/{prev.slug}">{prev.title}</a>
 			{/if}
 		</div>
 
 		<div>
 			<span class:faded={!next}>next</span>
 			{#if next}
-				<a href="/docs/{next.slug}">{next.title}</a>
+				<a href="/docs/{params.category}/{next.slug}">{next.title}</a>
 			{/if}
 		</div>
 	</div>
