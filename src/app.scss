@@ -28,7 +28,7 @@
 	--nav-side: 2rem;
 	--nav-h: 3rem;
 
-	--side-nav: 2rem;
+	--side-nav: 4.5rem;
 
 	--top-offset: 6rem;
 
@@ -64,6 +64,10 @@ h5,
 .h5 {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, blockquote {
+	position: relative;
 }
 
 h1,
@@ -104,4 +108,15 @@ a, .link {
 	&:hover {
 		text-decoration: underline;
 	}
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }

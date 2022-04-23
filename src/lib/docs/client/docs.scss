@@ -19,10 +19,6 @@
 		letter-spacing: 0.05em;
 		text-transform: uppercase;
 		max-width: var(--linemax);
-
-		.anchor {
-			bottom: 4rem;
-		}
 	}
 
 	h3 {
@@ -61,12 +57,12 @@
 	.anchor {
 		position: absolute;
 		display: block;
-		// background: url(@sveltejs/site-kit/icons/link.svg) 0 50% no-repeat;
-		background-size: 1em 1em;
+		background: url('/images/link.svg') 0 50% no-repeat;
+		background-size: .6em .6em;
 		width: 1.4em;
 		height: 1em;
-		left: -1.3em;
-		bottom: 0.3rem;
+		left: -1em;
+		bottom: .65em;
 		opacity: 0;
 		transition: opacity 0.2s;
 		user-select: none;
