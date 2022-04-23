@@ -20,13 +20,13 @@
 	export let params;
 
 	$: contents = sections.map((section) => ({
-		path: `/${params.category}/${section.slug}`,
+		path: `/docs/${params.category}/${section.slug}`,
 		title: section.title,
 		sections: section.sections.map((subsection) => ({
-			path: `/${params.category}/${section.slug}#${subsection.slug}`,
+			path: `/docs/${params.category}/${section.slug}#${subsection.slug}`,
 			title: subsection.title,
 			sections: subsection.sections.map((subsection) => ({
-				path: `/${params.category}/${section.slug}#${subsection.slug}`,
+				path: `/docs/${params.category}/${section.slug}#${subsection.slug}`,
 				title: subsection.title
 			}))
 		}))
