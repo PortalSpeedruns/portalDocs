@@ -4,7 +4,7 @@
 	// TODO should use a shadow endpoint instead, but svelte kit bug?
 	/** @type {import('@sveltejs/kit').Load} */
 	export async function load({ fetch, params }) {
-		const res = await fetch(`/${params.category}/${params.slug}.json`);
+		const res = await fetch(`/docs/${params.category}/${params.slug}.json`);
 		const { prev, next, section } = await res.json();
 
 		return {

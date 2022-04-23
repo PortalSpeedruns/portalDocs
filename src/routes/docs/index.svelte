@@ -1,10 +1,12 @@
 <script context="module">
 	export const prerender = true;
 
-	export function load({ url, params }) {
+	export function load({ params }) {
 		return {
 			status: 307,
-			redirect: `/${params.category}/introduction`
+			redirect: `/docs/docs/introduction`
 		};
 	}
 </script>
+
+<!-- TODO list all docs -->
