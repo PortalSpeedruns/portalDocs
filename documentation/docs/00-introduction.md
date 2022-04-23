@@ -10,8 +10,6 @@ title: Introduction
 [LiveSplit]: #resources-livesplit
 
 **This guide will provide you with all the knowledge required to start speedrunning Portal in any category of your choice. This guide is designed to be used with [Source Unpack] but can partially be used with the plain Steam version of the game.**
-
-**You can find the easiest strats on the top of each chamber. The further down, the harder the strat.**
 <br><br>
 This guide is a constant work in progress.
 
@@ -21,13 +19,11 @@ This guide is a constant work in progress.
 **Community Sum of Best:**<br>https://docs.google.com/spreadsheets/d/1-2g_A-nrWZk2Bt8et-_QrV4k8ptmO1jyPUD9XyiUpQ0<br>
 **Individual Level Leaderboard:**<br>https://www.speedrun.com/portal/levels<br>
 **Category Extension Leaderboard:**<br>https://www.speedrun.com/portal_category_extensions<br>
-
 **Custom Portal Gun Tutorial (Unpack Version):**<br>https://www.youtube.com/watch?v=zpQBBjDfbdE<br>
 **Texture Locations:**<br>https://pastebin.com/dqZYrJzS<br>
 **Doc of Extra Docs:**<br>https://docs.google.com/document/d/1mf5zgvjsYBixoRFRaa2T1J8DVbwxJz5itb0PEmUu-dI<br>
 
-## Setup
-### Video by Inflame
+## Setup 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nc7B6FNi-r8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Resources
@@ -70,7 +66,7 @@ Download can be found **[here](https://github.com/UncraftedName/UncraftedDemoPar
 
 ### Source Pause Tool (SPT)
 **This plugin has a number of useful features**
-- Saveglitch Overlay (To see where you’re actually aiming your portals during a saveglitch)
+- Save Glitch Overlay (To see where you’re actually aiming your portals during a Save Glitch)
 - HUD with extra details (Portal Bubble, OOB, etc.)
 - TAS Tools (Documentation can be found **[here](https://docs.google.com/document/d/11iu9kw5Ufa3-QaiR7poJWBwfe1I56wI6fBtDgmWZ8Aw/edit)**)
 - much more...

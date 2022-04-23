@@ -79,12 +79,12 @@ Your “True Position” and the view you see will do the same movements accordi
 
 ### Save Glitch
 
-**Saveglitch** or **SG** starts off the same as the [Edge Glitch](#glitches-edge-glitch), while standing on top or next to the edge of a portal your camera gets dislocated from your body, the difference is that if you now save and then load that save you will be stuck in this state even if you move away from the portal.
+**Save Glitch** or **SG** starts off the same as the [Edge Glitch](#glitches-edge-glitch), while standing on top or next to the edge of a portal your camera gets dislocated from your body, the difference is that if you now save and then load that save you will be stuck in this state even if you move away from the portal.
 
 Collision while in the save glitch state is determined by what we call “Portal Physics Bubbles.” These bubbles exist to provide very basic physics calculations while a player is passing through a portal, before it is quickly updated to use the normal physics. The 2 key differences with these physics bubbles compared to normal physics are:
 
-- Collision with the floor, walls and ceiling is only rendered in a small area around the portal you have save glitched on (hence the term “bubble”)
-
+- Collision with the floor, walls and ceiling is only rendered in a small area around the portal you have save glitched on (hence the term “bubble”)<br>
+<br>
 - Only Props positioned in FRONT of the save glitched portal have collision<br>
 This means that props such as doors can be walked through like they don’t exist if positioned behind the save glitched portal
 
@@ -105,7 +105,7 @@ To trigger these angle glitches, you must enter a portal that is facing down and
 **VAG:**<br>
 The activation of this is different from LAG/AAG, it requires the player to stand exactly on a portal boundary (usually precise to 6-8 total decimal places). This trick should be possible on any orientations of portals, including wall, floor, and angled portals. However, this is not guaranteed to work for any particular pair of portals, in fact the majority of the time it will not. Due to the nature of the exploit, it is effectively impossible to predict when it will work on a specific portal pair, and it is extremely sensitive to many conditions including but not limited to: the orientation and locations of both portals, the portal placement order, and where the portals were shot from. Unlike LAG/AAG, VAG is also possible to perform on props.
 
-**Saveglitch from angle glitches**<br>
+**Save Glitch from angle glitches**<br>
 After some angle glitches, the player will get a modified form of [Save Glitch](#glitches-save-glitch). This modified [Save Glitch](#glitches-save-glitch) has different prop interactions than regular [Save Glitch](#glitches-save-glitch) and can be cancelled simply by shooting the [Save Glitch](#glitches-save-glitch) portal. [Saveloading](./introduction#key-binds-save-load-bind) while in this modified Save Glitch state will give the player regular [Save Glitch](#glitches-save-glitch).
 
 ### Vertical Wall Warp
