@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@fontsource/fira-mono': ^4.5.7
+  '@fontsource/fira-mono': ^4.5.8
   '@fontsource/montserrat': ^4.5.7
   '@fontsource/open-sans': ^4.5.8
   '@sveltejs/adapter-auto': next
@@ -22,7 +22,7 @@ specifiers:
   svelte-preprocess: ^4.10.6
 
 dependencies:
-  '@fontsource/fira-mono': 4.5.7
+  '@fontsource/fira-mono': 4.5.8
   '@fontsource/montserrat': 4.5.7
   '@fontsource/open-sans': 4.5.8
 
@@ -83,8 +83,8 @@ packages:
       - supports-color
     dev: true
 
-  /@fontsource/fira-mono/4.5.7:
-    resolution: {integrity: sha512-oQhYhIDXQwbLSK07arXWGv8H6+GGKlHHy/hfgHnv+DgkyD5i3z8l08tiYp5Bu0IVOYgX2s3lhs4H56yOBAxEYQ==}
+  /@fontsource/fira-mono/4.5.8:
+    resolution: {integrity: sha512-sFuSPB/Km8B1fy3CH0NqO5Nb4GmVMzp3XFaw6MwK293xhm3OnB68QJawwTTjLewcrS78wOTAhTUB058qxurJoQ==}
     dev: false
 
   /@fontsource/montserrat/4.5.7:
@@ -193,8 +193,8 @@ packages:
       - supports-color
     dev: true
 
-  /@types/node/17.0.25:
-    resolution: {integrity: sha512-wANk6fBrUwdpY4isjWrKTufkrXdu1D2YHCot2fD/DfWxF5sMrVSA+KN7ydckvaTCh0HiqX9IVl0L5/ZoXg5M7w==}
+  /@types/node/17.0.26:
+    resolution: {integrity: sha512-z/FG/6DUO7pnze3AE3TBGIjGGKkvCcGcWINe1C7cADY8hKLJPDYpzsNE37uExQ4md5RFtTCvg+M8Mu1Enyeg2A==}
     dev: true
 
   /@types/pug/2.0.6:
@@ -204,7 +204,7 @@ packages:
   /@types/sass/1.43.1:
     resolution: {integrity: sha512-BPdoIt1lfJ6B7rw35ncdwBZrAssjcwzI5LByIrYs+tpXlj/CAkuVdRsgZDdP4lq5EjyWzwxZCqAoFyHKFwp32g==}
     dependencies:
-      '@types/node': 17.0.25
+      '@types/node': 17.0.26
     dev: true
 
   /@typescript/twoslash/3.1.0:

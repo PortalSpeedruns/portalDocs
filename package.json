@@ -30,7 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/fira-mono": "^4.5.7",
+		"@fontsource/fira-mono": "^4.5.8",
 		"@fontsource/montserrat": "^4.5.7",
 		"@fontsource/open-sans": "^4.5.8"
 	}
