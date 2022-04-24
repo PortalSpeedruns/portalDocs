@@ -1,5 +1,5 @@
 <script>
-	import ErrorPage from '$lib/errorPage.svelte';
+	import ErrorPage from '$lib/ErrorPage.svelte';
 </script>
 
 <ErrorPage status={404} />

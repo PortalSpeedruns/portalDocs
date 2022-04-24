@@ -10,7 +10,7 @@
 </script>
 
 <script>
-	import ErrorPage from '$lib/errorPage.svelte';
+	import ErrorPage from '$lib/ErrorPage.svelte';
 
 	export let error;
 	export let status;
