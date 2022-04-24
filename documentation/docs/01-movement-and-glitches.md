@@ -114,3 +114,13 @@ After some angle glitches, the player will get a modified form of [Save Glitch](
 The first step is to place a portal on the wall you want to warp up or down on. Next you position yourself in this portal. Make sure that you are actually peeking out of the portal on the target wall. Once you’ve done that crouch down, you will not get warped if you are standing up in the portal.
 Now, if you want to warp downwards, you simply save and load. Warping upwards requires an extra step. Jump and while you are still in your upwards motion save and load.<br>
 Warping upwards is used in OoB speedruns but warping downwards generally isn’t (currently).
+
+### Seamshot
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YnCG6fbTQ-I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Quantum Crouch
+
+When the player crouches, then uncrouches, and crouches again before the animation of standing up completes, the game glitches their stance into two states. The camera becomes seperated from the player's actual body, allowing the player to peek their view through ceilings.
+
+The name is derived from the famous paradox "Schrödinger's Cat", where the player is in two states, both crouching and standing, until the player releases the crouch button. 
