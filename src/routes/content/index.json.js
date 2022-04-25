@@ -4,10 +4,10 @@ import { slugify } from '$lib/docs/server';
 
 const categories = [
 	{
-		slug: 'docs',
+		slug: 'main',
 		label: null,
 		href: (parts) =>
-			parts.length > 1 ? `/docs/${parts[0]}#${parts.slice(1).join('-')}` : `/docs/${parts[0]}`
+			parts.length > 1 ? `/main/${parts[0]}#${parts.slice(1).join('-')}` : `/main/${parts[0]}`
 	}
 ];
 
