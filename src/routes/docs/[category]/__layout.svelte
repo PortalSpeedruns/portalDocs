@@ -4,9 +4,13 @@
 	export async function load({ params, fetch }) {
 		const res = await fetch(`/docs/${params.category}.json`);
 
+		// jank way to force prerendering of endpoint
+		const content = await fetch(`/docs/${params.category}/content.json`);
+
 		return {
 			props: {
 				sections: await res.json(),
+				content: await content.json(),
 				params
 			}
 		};
