@@ -118,6 +118,19 @@ export async function read_all(dir) {
 }
 
 /** @param {string} dir */
+export async function read_folder(dir) {
+	const result = [];
+
+	for (const file of fs.readdirSync(`${base}/${dir}`)) {
+		if (file !== '') {
+			result.push(file);
+		}
+	}
+
+	return result;
+}
+
+/** @param {string} dir */
 export function read_headings(dir) {
 	return fs
 		.readdirSync(`${base}/${dir}`)

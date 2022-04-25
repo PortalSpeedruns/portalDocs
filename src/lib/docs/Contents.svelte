@@ -142,7 +142,6 @@
 
 	.section {
 		display: block;
-		margin-bottom: 0.25rem;
 		font-size: var(--h6);
 		font-weight: 600;
 	}
@@ -153,6 +152,11 @@
 		font-family: var(--font);
 		padding-bottom: 0.5em;
 		margin-left: 1rem;
+	}
+
+	.section,
+	.subsection {
+		margin-bottom: 0.25rem;
 	}
 
 	.nested {

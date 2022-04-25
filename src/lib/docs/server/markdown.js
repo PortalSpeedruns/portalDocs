@@ -60,7 +60,6 @@ const default_renderer = {
 	},
 
 	heading(text, level) {
-		console.log('heading', level);
 		return '<h' + level + '>' + text + '</h' + level + '>\n';
 	},
 

@@ -1,6 +1,8 @@
 <script>
 	import Search from '$lib/search/Search.svelte';
 	import paintLogo from '$lib/header/portalDocsPaint.png';
+
+	import { page } from '$app/stores';
 </script>
 
 <header>
@@ -10,7 +12,11 @@
 				<img src={paintLogo} alt="Portal Docs" />
 			</a>
 		</div>
-		<Search />
+
+		{#if $page?.params?.category}
+			<Search />
+		{/if}
+
 		<ul class="external">
 			<li><a href="https://www.speedrun.com/portal">speedrun.com</a></li>
 			<li>

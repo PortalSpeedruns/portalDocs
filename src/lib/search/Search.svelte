@@ -3,6 +3,8 @@
 	import { browser } from '$app/env';
 	import { onMount } from 'svelte';
 
+	import { page } from '$app/stores';
+
 	let nav;
 	if (browser) {
 		nav = navigator;
@@ -15,7 +17,7 @@
 	let query = '';
 
 	onMount(async () => {
-		const res = await fetch('/content.json');
+		const res = await fetch(`/docs/${$page.params.category}/content.json`);
 		const { blocks } = await res.json();
 
 		index = new flexsearch.Index({
@@ -108,7 +110,13 @@
 		<ul>
 			{#each results as result}
 				<li>
-					<a on:click={() => {}} href={result.href}>
+					<a
+						on:click={() => {
+							query = '';
+							update();
+						}}
+						href={result.href}
+					>
 						<small>{result.breadcrumbs.join('/')}</small>
 						<strong>{@html excerpt(result.title, query)}</strong>
 						<span>{@html excerpt(result.content, query)}</span>
