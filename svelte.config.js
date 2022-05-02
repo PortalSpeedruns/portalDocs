@@ -8,6 +8,11 @@ const config = {
 	kit: {
 		adapter: adapter(),
 
+		// prerender routes by default
+		prerender: {
+			default: true
+		},
+
 		// Override http methods in forms
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
