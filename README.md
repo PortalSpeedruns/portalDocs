@@ -1,6 +1,6 @@
 # Portal 1 Speedrun Docs
 
-See the docs live at [portaldocs.vercel.app/](https://portaldocs.vercel.app/docs/introduction)
+See the docs live at [portalspeedruns.com](https://www.portalspeedruns.com/docs/main/introduction)
 
 ## Development
 
@@ -15,17 +15,14 @@ npm install # or pnpm install
 Start the project using:
 
 ```bash
-npm run start
+npm run start # or pnpm start
 ```
 
 or to start the project in development mode use:
 
 ```bash
-npm run dev
+npm run dev # or pnpm dev
 ```
-
-<!-- Check out the live development branch at -->
-<!-- instert dev site link -->
 
 ## License
 
