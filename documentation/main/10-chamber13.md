@@ -6,7 +6,7 @@ title: Chamber 13
 
 ### Beginner - Legacy
 
-If you don't want to do the [save glitch](./movement-and-glitches#glitches-save-glitch) for this chamber, you can do the [No SLA strat](./chamber-13#inbounds-no-sla-beginner-legacy) instead.
+If you don't want to do the [save glitch](./movement-and-glitches#glitches-save-glitch) for this chamber, you can do the [No SLA strat](./chamber13#inbounds-no-sla-beginner-legacy) instead.
 
 ### Intermediate - Saveglitch
 
