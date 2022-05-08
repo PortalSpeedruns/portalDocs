@@ -18,7 +18,7 @@ A somewhat precise [save glitch](./movement-and-glitches#glitches-save-glitch) t
 
 ### Beginner - Legacy
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x39hmpQG6Is title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/x39hmpQG6Is" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This video goes over the basic strat, aswell as some optimisations.
 
@@ -32,7 +32,7 @@ This video explains chamber 13-18 since they are all very fast and similar.
 
 ### Advanced - Under Elevator 2
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DNeidBXoI1s title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DNeidBXoI1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This strat is **much** more difficult than UE1 and only recommended when going for top times.
 <br>
