@@ -12,7 +12,7 @@ The easier of the two [save glitches](./movement-and-glitches#glitches-save-glit
 
 ### Intermediate - Quantum Crouch
 
-See [the No SLA section](./chamber-15#inbounds-no-sla-intermediate-quantum-crouch).
+See [the No SLA section](./chamber15#inbounds-no-sla-intermediate-quantum-crouch).
 
 ### Advanced - Early Save Glitch
 
