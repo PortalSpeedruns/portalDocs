@@ -19,6 +19,9 @@
 
 <script>
 	import Contents from '$lib/docs/Contents.svelte';
+	import SearchBox from '$lib/search/SearchBox.svelte';
+
+	import { browser } from '$app/env';
 
 	export let sections;
 	export let params;
@@ -42,6 +45,10 @@
 	<div class="toc-container">
 		<Contents {contents} />
 	</div>
+
+	{#if browser}
+		<SearchBox />
+	{/if}
 </div>
 
 <style lang="scss">
