@@ -26,7 +26,7 @@ This video goes over the basic strat, aswell as some optimisations.
 
 ### Beginner - Under Elevator
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uFLtVJ1l_f8 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uFLtVJ1l_f8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 This video explains chamber 13-18 since they are all very fast and similar.
 
@@ -42,4 +42,4 @@ The overall timesave compared to UE1 is about 2-3 seconds.
 
 ### Beginner
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eGGsb0l8uNo title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eGGsb0l8uNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
