@@ -7,6 +7,7 @@
 	import { searching, query } from './stores';
 
 	import flexsearch from 'flexsearch';
+	import { focusable_children } from './focus';
 
 	let recent_searches = [];
 
@@ -121,7 +122,24 @@
 {#if $searching && index}
 	<div class="modal-background" on:click={close} />
 
-	<div bind:this={modal} class="modal">
+	<div
+		bind:this={modal}
+		class="modal"
+		on:keydown={(e) => {
+			if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+				e.preventDefault();
+				const group = focusable_children(e.currentTarget);
+
+				const selector = 'a, input';
+
+				if (e.key === 'ArrowDown') {
+					group.next(selector);
+				} else {
+					group.prev(selector);
+				}
+			}
+		}}
+	>
 		<div class="search-box">
 			<!-- svelte-ignore a11y-autofocus -->
 			<input
@@ -232,6 +250,11 @@
 		background: none;
 
 		color: #fff;
+
+		svg {
+			width: 1.25rem;
+			height: 1.25rem;
+		}
 	}
 
 	.search-box > * {
@@ -271,6 +294,11 @@
 			background-color: #eee;
 		}
 
+		&:focus {
+			background-color: #eee;
+			outline: none;
+		}
+
 		small,
 		strong,
 		span {
@@ -278,7 +306,7 @@
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			line-height: 1;
+			line-height: 1.1;
 		}
 
 		small {
@@ -291,7 +319,7 @@
 		strong {
 			font-size: 1rem;
 			color: var(--text);
-			margin: 0.4rem 0;
+			margin: 0.25rem 0;
 		}
 
 		strong :global(mark) {
@@ -304,11 +332,12 @@
 		span {
 			font-size: 0.8rem;
 			color: #999;
-		}
+			line-height: 1.15;
 
-		span :global(mark) {
-			background: none;
-			color: #111;
+			:global(mark) {
+				background: none;
+				color: #111;
+			}
 		}
 	}
 
