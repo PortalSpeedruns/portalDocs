@@ -209,8 +209,8 @@
 		position: relative;
 		height: calc(100% - 2rem);
 		width: calc(100vw - 2rem);
-		max-width: 50rem;
-		max-height: 50rem;
+		max-width: 32rem;
+		max-height: 32rem;
 		filter: drop-shadow(2px 4px 16px rgba(0, 0, 0, 0.2));
 		border-radius: var(--border-r);
 		display: flex;
@@ -222,8 +222,8 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 5rem;
-		height: 5rem;
+		width: 3rem;
+		height: 3rem;
 		background: none;
 
 		color: #fff;
@@ -235,7 +235,7 @@
 
 	.info {
 		padding: 1rem;
-		font-size: 1.2rem;
+		font-size: 0.8125rem;
 		font-weight: normal;
 		text-transform: uppercase;
 		background-color: white;
@@ -243,12 +243,76 @@
 		pointer-events: all;
 	}
 
+	ul {
+		margin: calc(-1 * var(--border-r)) 0 0 0;
+		background-color: white;
+		border-radius: 0 0 var(--border-r) var(--border-r);
+		pointer-events: all;
+	}
+
+	li {
+		position: relative;
+		list-style: none;
+		margin: 0;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		line-height: 1;
+		padding: 1rem;
+
+		&:hover {
+			background-color: #eee;
+		}
+
+		small,
+		strong,
+		span {
+			display: block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			line-height: 1;
+		}
+
+		small {
+			font-size: 0.6rem;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: #999;
+		}
+
+		strong {
+			font-size: 1rem;
+			color: var(--text);
+			margin: 0.4rem 0;
+		}
+
+		strong :global(mark) {
+			background-color: #676778;
+			color: white;
+			text-decoration: none;
+			border-radius: 1px;
+		}
+
+		span {
+			font-size: 0.8rem;
+			color: #999;
+		}
+
+		span :global(mark) {
+			background: none;
+			color: #111;
+		}
+	}
+
 	input {
 		font-family: inherit;
-		font-size: 1.5rem;
+		font-size: 1rem;
 		font-weight: 600;
-		padding: 1rem 6rem 0.5rem 1rem;
-		height: 5rem;
+		padding: 0.75rem 6rem 0.5rem 1rem;
+		height: 3rem;
 		border: none;
 		border-bottom: 1px solid #eee;
 		flex-shrink: 0;
@@ -260,5 +324,10 @@
 		&::placeholder {
 			color: #ababb4;
 		}
+	}
+
+	.results {
+		overflow: auto;
+		overscroll-behavior-y: none;
 	}
 </style>
