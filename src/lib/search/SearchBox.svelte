@@ -20,6 +20,12 @@
 		close();
 	});
 
+	/** @param {string} href */
+	function navigate(href) {
+		// $recent = [href, ...$recent.filter((x) => x !== href)];
+		close();
+	}
+
 	function close() {
 		if ($searching) {
 			$searching = false;
@@ -69,7 +75,6 @@
 	onMount(async () => {
 		const res = await fetch(`/docs/${$page.params.category}/content.json`);
 		const { blocks } = await res.json();
-		console.log(res, blocks);
 
 		index = new flexsearch.Index({
 			tokenize: 'forward'
@@ -158,7 +163,7 @@
 						<ul>
 							{#each results as result}
 								<li>
-									<a href={result.href}>
+									<a on:click={() => navigate(result.href)} href={result.href}>
 										<small>{result.breadcrumbs.join('/')}</small>
 										<strong>{@html excerpt(result.title, $query)}</strong>
 										<span>{@html excerpt(result.content, $query)}</span>

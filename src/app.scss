@@ -124,3 +124,21 @@ button {
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
+
+// style all scroll bars except on body
+body * {
+	&::-webkit-scrollbar {
+		width: 0.5rem;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background-color: #ccd0d5;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: #7c7c7c;
+		border-radius: 10px;
+	}
+}
