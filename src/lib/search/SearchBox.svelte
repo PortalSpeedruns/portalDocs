@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 
-	import { searching, query } from './stores';
+	import { searching, query, recent } from './stores';
 
 	import flexsearch from 'flexsearch';
 	import { focusable_children } from './focus';
@@ -23,7 +23,7 @@
 
 	/** @param {string} href */
 	function navigate(href) {
-		// $recent = [href, ...$recent.filter((x) => x !== href)];
+		$recent = [href, ...$recent.filter((x) => x !== href)];
 		close();
 	}
 
@@ -103,6 +103,8 @@
 
 		update();
 	});
+
+	$: recent_searches = lookup ? $recent.map((href) => lookup.get(href)).filter(Boolean) : [];
 </script>
 
 <svelte:window
@@ -199,6 +201,21 @@
 					{/if}
 				{:else}
 					<h2 class="info">{recent_searches.length ? 'Recent searches' : 'No recent searches'}</h2>
+
+					{#if recent_searches.length}
+						<ul>
+							{#each recent_searches as search, i}
+								<!-- svelte-ignore a11y-mouse-events-have-key-events -->
+								<li class="recent">
+									<a on:click={() => navigate(search.href)} href={search.href}>
+										<small>{search.breadcrumbs.join('/')}</small>
+										<strong>{search.title}</strong>
+									</a>
+									<!-- todo add delte button? -->
+								</li>
+							{/each}
+						</ul>
+					{/if}
 				{/if}
 			</div>
 		</div>
