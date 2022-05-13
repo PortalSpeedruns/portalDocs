@@ -1,0 +1,1 @@
+import{S as n,i as e,s as o}from"../../chunks/index-6e32065f.js";const r=!0;async function l({fetch:s}){return{props:{sections:await(await s("/content.json")).json()}}}class u extends n{constructor(t){super(),e(this,t,null,null,o,{})}}export{u as default,l as load,r as prerender};

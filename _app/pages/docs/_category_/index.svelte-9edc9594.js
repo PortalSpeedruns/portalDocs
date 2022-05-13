@@ -1,1 +1,0 @@
-import{S as r,i as o,s}from"../../../chunks/index-a86ccbc9.js";const a=!0;function u({params:t}){return{status:307,redirect:`/docs/${t.category}/introduction`}}class c extends r{constructor(e){super(),o(this,e,null,null,s,{})}}export{c as default,u as load,a as prerender};
