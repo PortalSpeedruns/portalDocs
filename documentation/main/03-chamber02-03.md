@@ -11,9 +11,9 @@ title: Chamber 02/03
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u9I0BtZtvuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This is a intermediate Save Glitch, which includes a hard shot while in the air. Saves about 8 seconds.
+This is an intermediate [Save Glitch](./movement-and-glitches#glitches-save-glitch), which includes a hard shot while in the air. Saves about 8 seconds.
 
-**Advanced Optimization:** An advanced set of optimizations that will require either precise shots and otherwise tremendous effort, for minimal timesave.
+**Advanced Optimization:** An advanced set of optimizations that will require precise shots and otherwise tremendous effort, for minimal timesave.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/olOcFofIVGA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -35,13 +35,13 @@ The only viable route.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YBzFV1yr4og" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Simple Save Glitch, older route.
+Simple [Save Glitch](./movement-and-glitches#glitches-save-glitch), older route.
 
 ### Beginner - New Game
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QTb8TxCiHqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Simple save glitch to get under the elevator that uses the new game feature to get up to 04. You must record video to use this since it requires pausing and you also have to use ``sv_unlockedchapters 0`` every time you reset.<br>
+Simple [Save Glitch](./movement-and-glitches#glitches-save-glitch) to get under the elevator that uses the new game feature to get up to 04. You must record video to use this since it requires pausing and you also have to use ``sv_unlockedchapters 0`` every time you reset.<br>
 You can accomplish that by adding it to the end of your restart command. (``bind <key> "speedrun_start; sv_unlockedchapters 0"``)
 
 ## Glitchless
