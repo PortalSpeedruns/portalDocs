@@ -62,6 +62,8 @@ Very difficult route that requires good movement, precise and quick portal shoot
 
 ## Out of Bounds
 
+### Beginner
+
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/r3E-KVT0yPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Basic portal shooting to get to the next load zone. **Build 3420:** Slightly different due to free oob movement.

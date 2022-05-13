@@ -67,7 +67,7 @@ Download can be found **[here](https://github.com/UncraftedName/UncraftedDemoPar
 ### Source Pause Tool (SPT)
 **This plugin has a number of useful features**
 - Save Glitch Overlay (To see where you’re actually aiming your portals during a Save Glitch)
-- HUD with extra details (Portal Bubble, OOB, etc.)
+- HUD with extra details (Portal Bubble, OoB, etc.)
 - TAS Tools (Documentation can be found **[here](https://docs.google.com/document/d/11iu9kw5Ufa3-QaiR7poJWBwfe1I56wI6fBtDgmWZ8Aw/edit)**)
 - much more...
 
@@ -96,14 +96,14 @@ Download can be found **[here](https://drive.google.com/drive/folders/1r8rtg1Ud6
 ## Installation
 - **After downloading [Source Unpack], extract it somewhere you like (Documents or Desktop).**<br>
 
-Do NOT put it in your steam library or in system folders!<br>
+Do NOT put it in your Steam library or in system folders!<br>
 This version does not require the Steam version, but you do need to own Portal on Steam and have Steam running in order to play.
 
 - **Once installation is complete, simply go to your chosen folder and double-click on your `Portal.bat` to launch the game.**<br>
 
 You may also choose to create a shortcut to this file on your Desktop for convenience.
 
-- **When you first launch your game, you want to enable the developer console**<br>
+- **When you first launch your game, enable the developer console**<br>
 
 `Options -> Keyboard -> Advanced -> Enable Developer Console`<br>
 It makes key bindings much easier and allows the use of the [Demo Auto-Recorder] plugin. You can then open the console by pressing the key under the Escape key.
@@ -116,13 +116,13 @@ If you do still need to install this for any reason, you can use this tutorial *
 - **Download the [Vault Save] and unzip it into `Source Unpack/portal/SAVE/`**<br>
 
 Go to the [Keybinds](#keybinds) section of this guide to see the different binds you need to actually start the run.<br>
-Be aware that if you want to skip the Vault, you are required to use [this specific file](#resources-vault-save); making your own file is not allowed.
+Please be aware that if you want to skip the vault, you are required to use [this specific file](#resources-vault-save); making your own file is not allowed.
 
 - **Download, install and launch [LiveSplit]**<br>
 
 In LiveSplit, make sure to right click and select the `Edit Splits` option, then click on the `Activate` button to ensure that the autosplitter is active.<br>
 Once you’re done, close the Edit Splits window, then right click the main window again and go to `Compare Against` and choose `Game Time` to select the correct timing method. This will ensure that load times are removed from your final time.<br>
-And finally, always make sure to save your splits when you are done using LiveSplit.
+Make sure to always save your splits when you are done using LiveSplit.
 
 (Linux Installation Guide video can be found **[here](https://www.youtube.com/watch?v=S59-vTgG2yg)**)
 
@@ -139,7 +139,7 @@ Example: If you forgot the command to move left, `find left` will give you a lis
 
 ### Jump Bind
 Next you need to bind the `+jump` command to your scroll wheel. This can be done with `bind mwheelup +jump` and/or `bind mwheeldown +jump`
-(This allows us to buffer jumps as we land, which is essential for consistent bunnyhopping / [ABH movement](./movement-and-glitches#basic-movement-abh))
+(This allows us to buffer jumps as we land, which is essential for consistent [bhops](./movement-and-glitches#basic-movement-bunny-hopping) and [ABH movement](./movement-and-glitches#basic-movement-abh))
 
 ### Quick Save & Load Binds
 First you need to bind the `save` and `load` commands to keys. This can be done with `bind [key] "save quick"` and `bind [key] "load quick"`
@@ -147,7 +147,7 @@ First you need to bind the `save` and `load` commands to keys. This can be done 
 ### Save-Load Bind
 **For easier save glitching you can make a save-load bind separate from the normal Quick Save and Quick Load buttons.**
 
-Type `bind [key] "save glitch; load glitch"` into your console, replace [key] with your preferred key.
+Type `bind [key] "save glitch; load glitch"` into your console, again, replace [key] with your preferred key.
 **Note the quotes here:** Commands with spaces and/or semicolons have to be surrounded with quotes.
 
 It is also recommended that you bind a key to load from this save (`bind [key] "load glitch"`).
@@ -188,12 +188,15 @@ bind t "load glitch"
 bind r toggle_duck
 bind 1 "sv_player_funnel_into_portals 1"
 bind 2 "sv_player_funnel_into_portals 0"
-bind p speedrun_start
+bind [ speedrun_start
 bind m speedrun_stop
 ```
 
+**Please note:** Source Engine has media key inputs for next song, pause song and previous song on ``P``, ``G`` and ``Q`` respectively.
+
 ### Practice commands
 **For practicing, you may use these commands:**
+
 ```
 sv_cheats 1         - Enable cheats (0 to disable)
 noclip              - Fly around the map without colliding with any walls
@@ -202,15 +205,21 @@ god                 - Infinite health
 ai_disable          - Disable turrets & GLaDOS
 _y_spt_overlay 1    - Enable SPT overlay for save glitches
 ```
+
 **Please note:** These commands are cheat protected and are not allowed in runs. Please disable them before doing runs.
 
-## Rules & Timing
-<img src="/images/view_rules.png">
+### Allowed Commands / Binds
 
-You can find the current category rules on the leaderboards.
-
-- If any of those conditions are broken, you need to reload a save.
-- Shooting a portal through OOB space that doesn’t land anywhere or accidentally doing clipping glitch in maps like 10 is okay.
+- Any bind that is accessible from the menu
+- Custom named save binds
+- Demo Auto-Recorder plugin related binds
+- Toggle binds
+- Binds for sensitivity
+- `sv_player_funnel_into_portals`
+- `toggle_duck`
+- `cl_showpos 1`
+- `r_drawviewmodel 0`
+- `save`, `fps_max [fps]` and `load` on one key binding
 
 ### Timing
 
@@ -225,16 +234,3 @@ You can find the current category rules on the leaderboards.
 - All runs have to be submitted with some sort of proof in form of a video or demos. In case of suspicion, demos can be requested by the mods.
 - Videos have to show the full run from start to finish.
 - Top 10 runs have to be submitted with a recording showing [LiveSplit] and demos provided.
-
-### Allowed Commands / Binds
-
-- Any bind that is accessible from the menu
-- Custom named save binds
-- Demo Auto-Recorder plugin related binds
-- Toggle binds
-- Binds for sensitivity
-- `sv_player_funnel_into_portals`
-- `toggle_duck`
-- `cl_showpos 1`
-- `r_drawviewmodel 0`
-- `save`, `fps_max [fps]` and `load` on one key binding

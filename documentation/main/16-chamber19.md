@@ -11,7 +11,7 @@ title: Chamber 19
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Rsz9z4DawYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-A pretty easy [LAG] that gets you to the room above the fire pit. [Here](https://www.youtube.com/watch?v=9MQdHqlgprE) is an alternative to the Edge Glitch if you are having trouble with it.
+A pretty easy [LAG] that gets you to the room above the fire pit. [Here](https://www.youtube.com/watch?v=9MQdHqlgprE) is an alternative to the [Edge Glitch](./movement-and-glitches#glitches-edge-glitch) if you are having trouble with it.
 
 ### Beginner - Peeks
 
@@ -44,7 +44,7 @@ A second, difficult, additional LAG after the first one that gets you to the ver
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Rsz9z4DawYQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-A pretty easy [LAG] that gets you to the room above the fire pit. [Here](https://www.youtube.com/watch?v=9MQdHqlgprE) is an alternative to the edge glitch if you are having trouble with it.
+[LAG] that gets you to the room above the fire pit. [Here](https://www.youtube.com/watch?v=9MQdHqlgprE) is an alternative to the [Edge Glitch](./movement-and-glitches#glitches-edge-glitch) if you are having trouble with it.
 
 ### Beginner - Peeks
 
@@ -58,11 +58,11 @@ Uses Portal Peeking to get to the end, **not recommended**.
 
 A faster [LAG] route that warps you into some goo you have to swim out of (hence the name). A replacement for the single [LAG] that leads nicely into double [LAG].
 
-### Double LAG
+### Advanced - No SLA Double LAG
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CgPd65CZAR4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Uses Edge Glitches and Portal Peeks to set up a second LAG. Use [the other double lag video](https://www.youtube.com/watch?v=MjwnD5K2lkQ&t=272s) as well to understand how the second LAG works.
+Uses [Edge Glitches](./movement-and-glitches#glitches-edge-glitch) and Portal Peeks to set up a second LAG. Use [the other double lag video](https://www.youtube.com/watch?v=MjwnD5K2lkQ&t=272s) as well to understand how the second [LAG] works.
 
 
 ## Out of Bounds
@@ -71,7 +71,7 @@ Uses Edge Glitches and Portal Peeks to set up a second LAG. Use [the other doubl
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Khh5XsRXHKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Utilizing Quantum Crouch Storage to clip Out of Bounds and quickly complete Chamber 19.
+Utilizing Quantum Crouch Storage to clip Out of Bounds and quickly complete chamber 19.
 
 ### Intermediate - 19 In Front
 

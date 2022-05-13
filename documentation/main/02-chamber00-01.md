@@ -45,7 +45,7 @@ A way to lose collision after the first portal opens, letting you fly right to t
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OnO-U6qYovM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 **Build 3420 Only**<br>
-The fastest route when paired with [Vault Skip](./chamber00-01#out-of-bounds-intermediate-vault-skip). Uses the cube to get save glitch to skip the 02 dialogue. Refer to the [old 02 skip video](https://youtu.be/q6D-HgOO4Zc) for getting on top of the elevator and getting into the room.
+The fastest route when paired with [Vault Skip](./chamber00-01#out-of-bounds-intermediate-vault-skip). Uses the cube to get [Save Glitch](./movement-and-glitches#glitches-save-glitch) to skip the 02 dialogue. Refer to the [old 02 Skip video](https://youtu.be/q6D-HgOO4Zc) for getting on top of the elevator and getting into the room.
 
 ### Expert - 02 Skip
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/q6D-HgOO4Zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

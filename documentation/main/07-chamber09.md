@@ -16,7 +16,7 @@ Saves 1-2 seconds over the standard method if done perfect, but the saveload tim
 ### Advanced - 10 In Front (Early Elevator Activation)
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/c6K3wP8sKp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Saves around 3 seconds by using the save delay method to hit the triggers for the elevator in a different order, making it start going up earlier and keeping the doors open for the start of 10.
+Saves around 3 seconds by using the Save Delay method to hit the triggers for the elevator in a different order, making it start going up earlier and keeping the doors open for the start of 10.
 
 ## Inbounds No SLA
 ### Beginner - General
@@ -33,13 +33,13 @@ Basic movement with a portal shot under the door.
 ### Intermediate - SG Preserve + In Front
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SDIt-VnORNw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Preserving [SG](./movement-and-glitches#glitches-save-glitch) from 09 into 10 so you can skip getting save glitched again, as well as starting 10 in front of the elevator.
+Preserving the [Save Glitch](./movement-and-glitches#glitches-save-glitch) from 09 into 10 so you can skip getting [Save Glitched](./movement-and-glitches#glitches-save-glitch) again, as well as starting 10 in front of the elevator.
 
 ### Advanced - Early Activation + SG Preserve
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ttGE8s9T3xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Saves one second over the intermediate strat by implementing early activation. Requires good movement and has some tight timings.
-There is also an alternate way to do the ending, shown [here](https://www.youtu.be/jvYXdnRwues)
+There is also an alternate way to do the ending [here](https://www.youtu.be/jvYXdnRwues)
 
 ## Glitchless
 ### Beginner - Portal Peek
