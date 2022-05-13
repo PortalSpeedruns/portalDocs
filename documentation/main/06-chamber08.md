@@ -21,7 +21,7 @@ If you did [06 in front of elevator](./chamber06-07#out-of-bounds-advanced-in-fr
 
 ## Glitchless
 ### Beginner - Portal Peek
-The Glitchless strat is the same as [the basic Inbounds one](https://www.youtube.com/watch?v=H7re62Wj554) just with [bunnyhopping](./movement-and-glitches#basic-movement-bunny-hopping) as movement instead of [ABH's](/movement-and-glitches#basic-movement-abh).
+The Glitchless strat is the same as [the basic Inbounds one](https://www.youtube.com/watch?v=H7re62Wj554) just with [bunnyhopping](./movement-and-glitches#basic-movement-bunny-hopping) as movement instead of [ABH's](./movement-and-glitches#basic-movement-abh).
 <br>
 If the portal peek is too difficult, you can also [jump to the platform](https://www.youtube.com/watch?v=vmyyRNIbiB0).
 
