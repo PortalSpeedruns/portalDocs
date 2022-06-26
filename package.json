@@ -18,19 +18,19 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^3.4.1",
 		"flexsearch": "^0.7.21",
-		"marked": "^4.0.16",
-		"prettier": "^2.6.2",
+		"marked": "^4.0.17",
+		"prettier": "^2.7.1",
 		"prettier-plugin-svelte": "^2.7.0",
 		"prismjs": "^1.28.0",
-		"sass": "^1.52.1",
+		"sass": "^1.53.0",
 		"shiki-twoslash": "^3.0.2",
 		"svelte": "^3.48.0",
-		"svelte-preprocess": "^4.10.6"
+		"svelte-preprocess": "^4.10.7"
 	},
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.8",
-		"@fontsource/montserrat": "^4.5.10",
+		"@fontsource/montserrat": "^4.5.11",
 		"@fontsource/open-sans": "^4.5.10"
 	}
 }

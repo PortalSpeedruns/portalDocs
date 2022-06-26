@@ -28,7 +28,7 @@
 	--nav-side: 2rem;
 	--nav-h: 3rem;
 
-	--side-nav: 4.5rem;
+	--side-nav: 2rem;
 	--top-offset: 4.5rem;
 
 	--linemax: 42rem;
@@ -48,6 +48,12 @@
 	--border-r: 0.4rem;
 
 	--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)
+}
+
+@media screen and (min-width: 800px) {
+	:root {
+		--side-nav: 4rem;
+	}
 }
 
 // TODO move this to font file

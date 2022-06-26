@@ -109,14 +109,20 @@
 			margin: 1em 0;
 		}
 
-		a:hover {
-			text-decoration: underline;
-		}
+		a {
+			white-space: pre-wrap;
+			word-wrap:break-word;
 
-		a code {
-			color: inherit;
-			background: rgba(255, 62, 0, 0.1) !important;
-		}
+			&:hover {
+				text-decoration: underline;
+			}
+
+			code {
+				color: inherit;
+				background: rgba(255, 62, 0, 0.1) !important;
+			}
+
+		} 
 	}
 
 	pre {
