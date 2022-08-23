@@ -3,16 +3,18 @@ title: Movement & Glitches
 ---
 
 ## Basic Movement
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zMob4eflmpM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+%y https://youtu.be/zMob4eflmpM
 
 ### Bunny Hopping
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YkayoUTJ0w0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+%y https://youtu.be/YkayoUTJ0w0
 
 ### ABH
 
 **Accelerated Backwards Hopping** or **ABH** is the main movement mechanic used in all Portal categories with the exception of Glitchless.<br>
 For ABH, it is highly recommended to have `+jump` bound to your mouse wheel.<br>
-While it is possible to ABH *without* the mouse wheel, it is very precise and inconsistent to perform. The mouse wheel allows you to spam jump inputs much faster than pressing a key, this enables you to spend as little time on the floor as possible.
+While it is possible to ABH _without_ the mouse wheel, it is very precise and inconsistent to perform. The mouse wheel allows you to spam jump inputs much faster than pressing a key, this enables you to spend as little time on the floor as possible.
 
 To initiate an ABH, you need **a certain starting velocity**. You can achieve this by jumping forwards and turning 180 degrees mid-air. You may also start an ABH by **jumping backwards and releasing S** after you jump.<br>
 At the same time you want to start holding your crouch key and let go of W. When you're about to land, start scrolling your mouse wheel. You want to keep scrolling **in small controlled bursts** every time you get close to the ground.<br>
@@ -24,7 +26,7 @@ This is why you need to be facing backwards for an ABH to work. (There are worka
 
 Adding air strafes using the A and D key and moving your mouse in the opposite direction mid-air will increase your acceleration.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zP62OqFteTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+%y https://youtu.be/zP62OqFteTM
 
 ### AFH
 
@@ -34,7 +36,7 @@ The game now thinks you are going backwards, and using the same logic as before,
 AFHing is used in Chamber 07 and Chamber 10, and also in some more advanced strats, like the starting AFH in Chamber 11.<br>
 While those chambers give you enough initial velocity to AFH right away, if you want to do it without the starting velocity, you need to either use an "S tap" (which is just pressing and holding S the moment you hit the ground) or [use a `+strafe` key](https://www.youtube.com/watch?v=z2uA7j7EGlA).
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zP62OqFteTM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+%y https://youtu.be/zP62OqFteTM
 
 ### ASH
 
@@ -48,17 +50,20 @@ If you turned 45 degrees left, you want to hold down both S and D, as you contin
 ### Other Movement Tech
 
 **Check out this video guide from Reassagressta on some other important movement tech:**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jqExEAB68-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+%y https://youtu.be/jqExEAB68-o
 
 ## Glitches
 
 ### Super Throw
+
 - You can interact with objects using `+use` (Default Bind: `E`)
 - Throw them by using `+attack` (Default Bind: `Mouse1`)
 - Super throw by holding down `Mouse1` and then pressing `E`.
 
 **Here is a video by Inflame showing the differences in throw length between the three main throwing techniques:**
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RTZ_7FX-pGg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+%y https://youtu.be/RTZ_7FX-pGg
 
 ### Edge Glitch
 
@@ -96,7 +101,7 @@ This means that props such as doors can be walked through like they don't exist 
 Save Glitches get cancelled by passing through a portal or getting too close to one.
 Overall every action you perform is exactly mirrored for the "True Position" just like with a normal [Edge Glitch](#glitches-edge-glitch).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VSaYzZ7EQyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+%y https://youtu.be/VSaYzZ7EQyA
 
 ### LAG/AAG/VAG
 

@@ -2,6 +2,30 @@
 
 See the docs live at [portalspeedruns.com](https://www.portalspeedruns.com/docs/main/introduction)
 
+## Documenting / contributing
+
+### Images
+
+If you want to add new images to the documentation, you first need to add the image to the `static/images` folder before referencing the image inside the markdown.
+
+**markdown example**
+
+```md
+![alt text if image doesn't load](/images/yourImage.png)
+```
+
+### Custom syntax
+
+On top of normal Markdown the documentation supports some special syntax to make documenting easier.
+
+#### Youtube embeds
+
+If you want to embed a Youtube video, you can do this like so using the `%y` prefix
+
+```
+%y youtube url
+```
+
 ## Development
 
 To install and work on the project locally:

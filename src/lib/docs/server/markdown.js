@@ -152,12 +152,51 @@ const default_renderer = {
 	}
 };
 
+function youtubeParser(url) {
+	const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+	const match = url.match(regExp);
+	return match && match[7].length == 11 ? match[7] : false;
+}
+
+const customTokenizer = {
+	name: 'custom',
+	level: 'block',
+	start(src) {
+		return src.indexOf('%');
+	},
+	tokenizer(src, tokens) {
+		const rule = /^\%y(.*)/;
+		const match = rule.exec(src);
+		if (match) {
+			return {
+				type: 'custom',
+				raw: match[0],
+				text: match[1].trim(),
+				tokens: []
+			};
+		}
+		return false;
+	},
+	renderer(token) {
+		const ytid = youtubeParser(token.text);
+
+		if (ytid) {
+			return `
+			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/${ytid}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			`;
+		}
+
+		return `Video parsing for ${token.text} went bad`;
+	}
+};
+
 /**
  * @param {string} markdown
  * @param {Partial<import('marked').Renderer>} renderer
  */
 export function transform(markdown, renderer = {}) {
 	marked.use({
+		extensions: [customTokenizer],
 		renderer: {
 			// we have to jump through these hoops because of marked's API design choices —
 			// options are global, and merged in confusing ways. You can't do e.g.

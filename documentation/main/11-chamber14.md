@@ -6,17 +6,17 @@ title: Chamber 14
 
 ### Beginner - Fast Fling
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EbesgW49pdU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+%y https://youtu.be/EbesgW49pdU
 
 ### Intermediate - Reportal
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Vlwk0UU_7bI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+%y https://youtu.be/Vlwk0UU_7bI
 
 You can use this instead of the fast fling, if preferred, but it only saves little time.
 
 ### Beginner - Backup
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YdTlfI6XuQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+%y https://youtu.be/YdTlfI6XuQ0
 
 Can be used as a backup if you fail the above strats or instead of them (not recommended).
 
