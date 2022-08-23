@@ -110,6 +110,7 @@
 		}
 
 		a {
+			// TODO change this to a smarter value (so it breaks on /)
 			white-space: pre-wrap;
 			word-wrap:break-word;
 

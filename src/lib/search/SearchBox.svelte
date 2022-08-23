@@ -75,7 +75,7 @@
 
 	onMount(async () => {
 		const res = await fetch(`/docs/${$page.params.category}/content.json`);
-		const { blocks } = await res.json();
+		const blocks = await res.json();
 
 		index = new flexsearch.Index({
 			tokenize: 'forward'

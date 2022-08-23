@@ -1,30 +1,12 @@
-<script context="module">
-	export const prerender = true;
-
-	export async function load({ params, fetch }) {
-		const res = await fetch(`/docs/${params.category}.json`);
-
-		// jank way to force prerendering of endpoint
-		const content = await fetch(`/docs/${params.category}/content.json`);
-
-		return {
-			props: {
-				sections: await res.json(),
-				content: await content.json(),
-				params
-			}
-		};
-	}
-</script>
-
 <script>
 	import Contents from '$lib/docs/Contents.svelte';
 	import SearchBox from '$lib/search/SearchBox.svelte';
 
 	import { browser } from '$app/env';
 
-	export let sections;
-	export let params;
+	export let data;
+	let { sections, params } = data;
+	$: ({ sections, params } = data); // to keep data in sync
 
 	$: contents = sections.map((section) => ({
 		path: `/docs/${params.category}/${section.slug}`,

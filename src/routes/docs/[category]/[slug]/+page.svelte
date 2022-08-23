@@ -1,32 +1,11 @@
-<script context="module">
-	export const prerender = true;
-
-	// TODO should use a shadow endpoint instead, but svelte kit bug?
-	/** @type {import('@sveltejs/kit').Load} */
-	export async function load({ fetch, params }) {
-		const res = await fetch(`/docs/${params.category}/${params.slug}.json`);
-		const { prev, next, section } = await res.json();
-
-		return {
-			props: {
-				prev,
-				next,
-				section,
-				params
-			}
-		};
-	}
-</script>
-
 <script>
 	import '$lib/docs/client/docs.scss';
 	import '$lib/docs/client/code.scss';
 	import 'prismjs/themes/prism.css';
 
-	export let prev;
-	export let next;
-	export let section;
-	export let params;
+	export let data;
+	let { prev, next, section, params } = data;
+	$: ({ prev, next, section, params } = data); // to keep data in sync
 </script>
 
 <svelte:head>

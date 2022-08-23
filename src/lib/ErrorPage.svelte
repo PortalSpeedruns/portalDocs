@@ -1,6 +1,6 @@
 <script>
-	export let error = '';
-	export let status = '';
+	export let error = 'Something went bad';
+	export let status = 404;
 </script>
 
 <main>

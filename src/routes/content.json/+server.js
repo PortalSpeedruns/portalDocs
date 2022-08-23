@@ -2,18 +2,17 @@ import fs from 'fs';
 import { extract_frontmatter, transform } from '$lib/docs/server/markdown';
 import { slugify } from '$lib/docs/server';
 
-export function get({ params }) {
-	const categories = [
-		{
-			slug: params.category,
-			label: null,
-			href: (parts) =>
-				parts.length > 1
-					? `/docs/${params.category}/${parts[0]}#${parts.slice(1).join('-')}`
-					: `/docs/${params.category}/${parts[0]}`
-		}
-	];
+// TODO loop through all docs
+const categories = [
+	{
+		slug: 'main',
+		label: null,
+		href: (parts) =>
+			parts.length > 1 ? `/main/${parts[0]}#${parts.slice(1).join('-')}` : `/main/${parts[0]}`
+	}
+];
 
+export function GET() {
 	const blocks = [];
 
 	const basePath = './documentation';

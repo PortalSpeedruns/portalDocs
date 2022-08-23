@@ -1,16 +1,5 @@
-<script context="module">
-	export const prerender = true;
-
-	export function load() {
-		return {
-			status: 307,
-			redirect: '/docs'
-		};
-	}
-</script>
-
-<script>
-</script>
+<!-- <script>
+</script> -->
 
 <svelte:head>
 	<title>Home</title>

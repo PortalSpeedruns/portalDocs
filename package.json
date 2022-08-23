@@ -2,35 +2,38 @@
 	"name": "p1docs",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
-		"build": "svelte-kit build",
+		"dev": "vite dev",
+		"build": "vite build",
 		"package": "svelte-kit package",
-		"preview": "svelte-kit preview",
-		"prepare": "svelte-kit sync",
-		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+		"preview": "vite preview",
+		"check": "svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
+		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
+		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
 		"devalue": "^2.0.1",
-		"eslint": "^7.32.0",
+		"eslint": "^8.22.0",
 		"eslint-config-prettier": "^8.5.0",
-		"eslint-plugin-svelte3": "^3.4.1",
+		"eslint-plugin-svelte3": "^4.0.0",
 		"flexsearch": "^0.7.21",
-		"marked": "^4.0.17",
+		"marked": "^4.0.19",
 		"prettier": "^2.7.1",
 		"prettier-plugin-svelte": "^2.7.0",
-		"prismjs": "^1.28.0",
-		"sass": "^1.53.0",
-		"shiki-twoslash": "^3.0.2",
-		"svelte": "^3.48.0",
-		"svelte-preprocess": "^4.10.7"
+		"prismjs": "^1.29.0",
+		"sass": "^1.54.5",
+		"shiki-twoslash": "^3.1.0",
+		"svelte": "^3.49.0",
+		"svelte-check": "^2.8.1",
+		"svelte-preprocess": "^4.10.7",
+		"vite": "^3.0.9"
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/fira-mono": "^4.5.8",
-		"@fontsource/montserrat": "^4.5.11",
-		"@fontsource/open-sans": "^4.5.10"
+		"@fontsource/fira-mono": "^4.5.9",
+		"@fontsource/montserrat": "^4.5.12",
+		"@fontsource/open-sans": "^4.5.11"
 	}
 }

@@ -1,18 +1,19 @@
-import fs from 'fs';
+import fs from 'node:fs';
 import { extract_frontmatter, transform } from '$lib/docs/server/markdown';
 import { slugify } from '$lib/docs/server';
 
-// TODO loop through all docs
-const categories = [
-	{
-		slug: 'main',
-		label: null,
-		href: (parts) =>
-			parts.length > 1 ? `/main/${parts[0]}#${parts.slice(1).join('-')}` : `/main/${parts[0]}`
-	}
-];
+export function GET({ params }) {
+	const categories = [
+		{
+			slug: params.category,
+			label: null,
+			href: (parts) =>
+				parts.length > 1
+					? `/docs/${params.category}/${parts[0]}#${parts.slice(1).join('-')}`
+					: `/docs/${params.category}/${parts[0]}`
+		}
+	];
 
-export function get() {
 	const blocks = [];
 
 	const basePath = './documentation';
@@ -70,11 +71,7 @@ export function get() {
 		}
 	}
 
-	return {
-		body: {
-			blocks
-		}
-	};
+	return new Response(JSON.stringify(blocks));
 }
 
 function plaintext(markdown) {

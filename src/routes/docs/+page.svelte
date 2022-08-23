@@ -1,9 +1,6 @@
-<script context="module">
-	export const prerender = true;
-</script>
-
 <script>
-	export let docs;
+	export let data;
+	let { docs } = data;
 </script>
 
 <div>
